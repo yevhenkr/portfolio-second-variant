@@ -1,12 +1,14 @@
 import './App.css';
 import styled from 'styled-components';
 import {Main} from "./common/components/layout/main/Main";
+import {Passions} from "./common/components/layout/sections/passions/Passions";
 
 
 function App() {
     return (
         <div className="App">
             <Main/>
+            <Passions/>
         </div>
     );
 }
