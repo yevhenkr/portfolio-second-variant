@@ -4,7 +4,7 @@ import {FlexWrapper} from "../../ui/flexWrapper/FlexWrapper";
 
 export const Main = () => {
     return (
-        <main>
+        <StyledMain>
             <FlexWrapper flexDirection={"row"} justify={"center"}>
             <FlexWrapper flexDirection={"column"} max_width={"600px"} width={"100%"}>
                 <StyledSpan>Hi !</StyledSpan>
@@ -16,10 +16,11 @@ export const Main = () => {
             </FlexWrapper>
             <UserSVG/>
             </FlexWrapper>
-        </main>
+        </StyledMain>
     );
 };
 
+const StyledMain= styled.main``
 const StyledSpan= styled.span``
 const StyledH1= styled.h1``
 const StyledH2= styled.h2``
