@@ -1,6 +1,6 @@
 import './App.css';
 import styled from 'styled-components';
-import {Main} from "./common/components/layout/main/main";
+import {Main} from "./common/components/layout/main/Main";
 
 
 function App() {
