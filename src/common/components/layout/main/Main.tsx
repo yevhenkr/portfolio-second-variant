@@ -20,7 +20,9 @@ export const Main = () => {
     );
 };
 
-const StyledMain= styled.main``
+const StyledMain= styled.main`
+    padding-bottom: 120px;
+`
 const StyledSpan= styled.span``
 const StyledH1= styled.h1``
 const StyledH2= styled.h2``

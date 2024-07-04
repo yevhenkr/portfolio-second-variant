@@ -8,9 +8,9 @@ import therd from "../../../../../assets/img/Edtech 1.jpg";
 
 export const Portfolio = () => {
     return (
-        <StyledSection>
+        <StyledSection >
             <TitleSection title={"My Portfolio"}/>
-            <FlexWrapper>
+            <FlexWrapper flexDirection={"row"} justify={"space-around"}>
                 <FlexWrapper flexDirection={"column"}>
                     <StyledSpan>Sendpay</StyledSpan>
                     <img src={`${first}`}/>
@@ -22,14 +22,14 @@ export const Portfolio = () => {
                 </FlexWrapper>
                 <FlexWrapper flexDirection={"column"}>
                     <StyledSpan>therd</StyledSpan>
-
                     <img src={`${therd}`}/>
                 </FlexWrapper>
-                <div></div>
             </FlexWrapper>
         </StyledSection>
     );
 };
 
-const StyledSection = styled.section``;
+const StyledSection = styled.section`
+    padding-bottom: 170px;
+`;
 const StyledSpan = styled.span``

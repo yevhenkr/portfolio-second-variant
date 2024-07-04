@@ -9,8 +9,11 @@ export const Passions = () => {
         <StyledSection id={'Passions'}>
             <StyledH2>Additional passions</StyledH2>
             <FlexWrapper flexDirection={"row"} justify={"space-around"}>
-                <FlexWrapper flexDirection={"column"}><PassionsFront/><h3>Front-End Developer</h3><span>
-                    (Sass, Bootstrap, Tailwind)</span></FlexWrapper>
+                <FlexWrapper flexDirection={"column"}>
+                    <PassionsFront/>
+                    <h3>Front-End Developer</h3>
+                    <span>(Sass, Bootstrap, Tailwind)</span>
+                </FlexWrapper>
                 <FlexWrapper flexDirection={"column"}><PassionsBack/><h3>Back-End Developer</h3><span>
                     (NodeJS, Laravel, Codeigniter)</span></FlexWrapper>
                 <FlexWrapper flexDirection={"column"}><PassionsUI/><h3>UI/UX Designer</h3><span>
@@ -21,6 +24,9 @@ export const Passions = () => {
 };
 
 
-const StyledSection = styled.section``
+const StyledSection = styled.section`
+padding-bottom: 170px;
+`
 const StyledH2 = styled.h2`
-text-align: center`
+    text-align: center;
+    padding-bottom: 60px`
