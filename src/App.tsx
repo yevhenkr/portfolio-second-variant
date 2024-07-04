@@ -1,6 +1,6 @@
 import './App.css';
 import styled from 'styled-components';
-import {Main} from "./common/components/layout/main/Main";
+import {Main} from "./common/components/layout/sections/main/Main";
 import {Passions} from "./common/components/layout/sections/passions/Passions";
 import {Footer} from "./common/components/layout/sections/footer/Footer";
 import {Header} from "./common/components/layout/sections/header/Header";

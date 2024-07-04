@@ -47,7 +47,7 @@ const StyledDiv = styled.div`
 
 const WaveBackground = styled.div`
     position: absolute;
-    bottom: -5px;
+    bottom: -24px;
     left: 0;
     width: 100%;
     z-index: -1;

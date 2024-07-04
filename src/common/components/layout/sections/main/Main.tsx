@@ -1,6 +1,6 @@
-import {UserSVG} from "../../../../assets/icons/user";
+import {UserSVG} from "../../../../../assets/icons/user";
 import styled from "styled-components";
-import {FlexWrapper} from "../../ui/flexWrapper/FlexWrapper";
+import {FlexWrapper} from "../../../ui/flexWrapper/FlexWrapper";
 
 export const Main = () => {
     return (
@@ -22,6 +22,7 @@ export const Main = () => {
 
 const StyledMain= styled.main`
     padding-bottom: 120px;
+    padding-top: 82px;
 `
 const StyledSpan= styled.span``
 const StyledH1= styled.h1``

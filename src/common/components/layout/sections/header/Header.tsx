@@ -1,12 +1,14 @@
 import React from 'react';
-import {FlexWrapper} from "../../../ui/flexWrapper/FlexWrapper";
-import {GithubIcon} from "../../../../../assets/icons/githubIcon";
 import styled from "styled-components";
+import {LogoIcon} from "../../../../../assets/icons/LogoIcon";
+import {FlexWrapper} from "../../../ui/flexWrapper/FlexWrapper";
 
 export const Header = () => {
     return (
         <StyledDiv >
-            <GithubIcon/>
+            <FlexWrapper align_i={"center"}>
+                <LogoIcon />
+            </FlexWrapper>
             <StyledUl>
                 <StyledLi><StyledLink href={"#Main"}>About</StyledLink></StyledLi>
                 <StyledLi><a href={"#Passions"}>Passions</a></StyledLi>
@@ -40,7 +42,7 @@ const StyledDiv =styled.div`
     left: 0;
 
     width: 100%;
-    height: 84px;
+    
     min-height: 50px;
     padding: 12px 16px;
     display: flex;
