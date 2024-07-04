@@ -4,6 +4,7 @@ import {Main} from "./common/components/layout/main/Main";
 import {Passions} from "./common/components/layout/sections/passions/Passions";
 import {Footer} from "./common/components/layout/sections/footer/Footer";
 import {Header} from "./common/components/layout/sections/header/Header";
+import {Portfolio} from "./common/components/layout/sections/portfolio/Portfolio";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
             <Header/>
             <Main />
             <Passions/>
+            <Portfolio/>
             <Footer/>
         </div>
     );
