@@ -6,7 +6,7 @@ import {PassionsUI} from "../../../../../assets/icons/passionsUI";
 
 export const Passions = () => {
     return (
-        <StyledSection>
+        <StyledSection id={'Passions'}>
             <StyledH2>Additional passions</StyledH2>
             <FlexWrapper flexDirection={"row"} justify={"space-around"}>
                 <FlexWrapper flexDirection={"column"}><PassionsFront/><h3>Front-End Developer</h3><span>

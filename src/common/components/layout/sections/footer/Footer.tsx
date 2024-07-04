@@ -5,12 +5,13 @@ import {InstagramIcon} from "../../../../../assets/icons/instagramIcon";
 import {EmailIcon} from "../../../../../assets/icons/emailIcon";
 import {PhoneIcon} from "../../../../../assets/icons/phoneIcon";
 import {WaveIcon} from "../../../../../assets/icons/WaveIcon";
+import styled from "styled-components";
 
 export const Footer = () => {
     return (
-        <FlexWrapper flexDirection={"column"}>
+        <FlexWrapper id={"footer"} flexDirection={"column"}>
             <TitleSection title={"Contact Me"}/>
-            <FlexWrapper flexDirection={"row"}>
+            <StyledDiv >
                 <FlexWrapper flexDirection={"column"}>
                     <GithubIcon/>
                     <TitleSection title={"Github"}/>
@@ -27,8 +28,22 @@ export const Footer = () => {
                     <PhoneIcon/>
                     <TitleSection title={"Github"}/>
                 </FlexWrapper>
-            </FlexWrapper>
-            <WaveIcon style={{position: "absolute" }}/>
+            </StyledDiv >
+            <WaveIcon style={{position: "absolute", bottom: "0", width:"100%", height:"350px", left:"0px", right:"0px", backgroundRepeat: "no-repeat", backgroundSize: "100%"}}/>
         </FlexWrapper>
     );
 };
+
+const StyledDiv = styled.div`
+    display: flex;
+flex-direction: row;
+    justify-content: center;
+    //position: relative;
+    //:before{
+    //    position: absolute;
+    //    width: 100%;
+    //    height: 100px;
+    //    content: '';
+    //    background-image: url("../../../../../assets/icons/WavePng.png");
+    //}
+`

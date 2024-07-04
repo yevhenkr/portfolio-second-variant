@@ -4,7 +4,7 @@ import {FlexWrapper} from "../../ui/flexWrapper/FlexWrapper";
 
 export const Main = () => {
     return (
-        <StyledMain>
+        <StyledMain id={'Main'}>
             <FlexWrapper flexDirection={"row"} justify={"center"}>
             <FlexWrapper flexDirection={"column"} max_width={"600px"} width={"100%"}>
                 <StyledSpan>Hi !</StyledSpan>
