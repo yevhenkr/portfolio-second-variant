@@ -3,10 +3,11 @@ import {FlexWrapper} from "../../../ui/flexWrapper/FlexWrapper";
 import {PassionsFront} from "../../../../../assets/icons/passionsFront";
 import {PassionsBack} from "../../../../../assets/icons/passionsBack";
 import {PassionsUI} from "../../../../../assets/icons/passionsUI";
+import {Section} from "../../../ui/section/Section";
 
 export const Passions = () => {
     return (
-        <StyledSection id={'Passions'}>
+        <Section id={'Passions'}>
             <StyledH2>Additional passions</StyledH2>
             <FlexWrapper flexDirection={"row"} justify={"space-around"}>
                 <FlexWrapper flexDirection={"column"}>
@@ -19,14 +20,11 @@ export const Passions = () => {
                 <FlexWrapper flexDirection={"column"}><PassionsUI/><h3>UI/UX Designer</h3><span>
                     (Figma, Zeplin, Adobe XD)</span></FlexWrapper>
             </FlexWrapper>
-        </StyledSection>
+        </Section>
     );
 };
 
 
-const StyledSection = styled.section`
-padding-bottom: 170px;
-`
 const StyledH2 = styled.h2`
     text-align: center;
     padding-bottom: 60px`

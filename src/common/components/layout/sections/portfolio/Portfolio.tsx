@@ -5,10 +5,11 @@ import {TitleSection} from "../../../ui/titleSections/TitleSection";
 import first from "../../../../../assets/img/e-commerce 1 1.jpg";
 import second from "../../../../../assets/img/SendPay 1.jpg";
 import therd from "../../../../../assets/img/Edtech 1.jpg";
+import {Section} from "../../../ui/section/Section";
 
 export const Portfolio = () => {
     return (
-        <StyledSection >
+        <Section >
             <TitleSection title={"My Portfolio"}/>
             <FlexWrapper flexDirection={"row"} justify={"space-around"}>
                 <FlexWrapper flexDirection={"column"}>
@@ -25,11 +26,8 @@ export const Portfolio = () => {
                     <img src={`${therd}`}/>
                 </FlexWrapper>
             </FlexWrapper>
-        </StyledSection>
+        </Section>
     );
 };
 
-const StyledSection = styled.section`
-    padding-bottom: 170px;
-`;
 const StyledSpan = styled.span``
