@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {LogoIcon} from "../../../../../assets/icons/LogoIcon";
 import {FlexWrapper} from "../../../ui/flexWrapper/FlexWrapper";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
+import {myTheme} from "../../../../../styles/Theme.styled";
 
 export const Header = () => {
     return (
@@ -20,15 +21,13 @@ const StyledDiv = styled.div`
     position: fixed;
     z-index: 2;
     top: 0;
-    right: 0;
-    left: 0;
-
+    max-width: 1170px;
     width: 100%;
 
     min-height: 50px;
     padding: 12px 16px;
     display: flex;
     justify-content: space-between;
-    background: #b0bdfd;
+    background: ${myTheme.color.white};
     border-bottom: 1px solid black;
 `

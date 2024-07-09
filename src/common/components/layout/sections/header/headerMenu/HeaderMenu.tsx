@@ -81,7 +81,7 @@ const StyledLink = styled.a`
             transform:  translateX(5px);
             transition: transform 0.5s ease;
 
-            color: ${myTheme.color.white};
+            color: ${myTheme.color.textColor};
 
             & + ${Mask} {
                 transform: translateX(-5px);
