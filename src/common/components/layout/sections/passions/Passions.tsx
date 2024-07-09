@@ -34,21 +34,6 @@ export const Passions = () => {
         </Section>
     );
 };
-
-
-const StyledH2 = styled.h2`
-    text-align: center;
-    padding-bottom: 60px`
-const SpanFirst = styled.span`
-    font-weight: ${myTheme.font.weights.regular};
-    font-size: 25px;
-    color: ${myTheme.color.textColor};
-`
-const SpanSecond = styled.span`
-    font-family: Poppins, sans-serif;
-    font-weight: ${myTheme.font.weights.semiBold};
-    font-size: 25px;
-`
 const H3Styled = styled.span`
     font-weight: ${myTheme.font.weights.semiBold};
     font-size: 25px;
