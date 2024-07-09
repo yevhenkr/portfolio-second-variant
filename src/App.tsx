@@ -27,4 +27,6 @@ const AppStyle = styled.div`
     justify-content: center;
     font-family: Poppins, sans-serif;
     font-weight: ${myTheme.font.weights.regular};
+    font-size: 35px;
+    color: ${myTheme.color.navy};
 `;
