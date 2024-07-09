@@ -57,5 +57,5 @@ const H3Styled = styled.span`
 const SpanSkills = styled.span`
     font-weight: ${myTheme.font.weights.regular};
     font-size: 18px;
-    color: ${myTheme.color.textColor};
+    color: ${myTheme.color.black};
 `
