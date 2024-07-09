@@ -19,6 +19,8 @@ export const Header = () => {
 
 const StyledDiv = styled.div`
     position: fixed;
+    display: flex;
+    align-items: center;
     z-index: 2;
     top: 0;
     max-width: 1170px;
