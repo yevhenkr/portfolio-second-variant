@@ -11,6 +11,14 @@ export const myTheme = {
         phone: 'screen and (max-width: 576)',
         tablet: 'screen and (max-width: 768)',
     },
+    font: {
+        weights: {
+            regular: 400,
+            medium: 500,
+            semiBold: 600,
+            bold: 700,
+        }
+    }
 }
 
 export const mySections = [

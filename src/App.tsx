@@ -1,28 +1,29 @@
-import './App.css';
 import styled from 'styled-components';
 import {Main} from "./common/components/layout/sections/main/Main";
 import {Passions} from "./common/components/layout/sections/passions/Passions";
 import {Footer} from "./common/components/layout/sections/footer/Footer";
 import {Header} from "./common/components/layout/sections/header/Header";
 import {Portfolio} from "./common/components/layout/sections/portfolio/Portfolio";
-
+import {myTheme} from "./styles/Theme.styled";
 
 function App() {
     return (
-        <div className="App">
+        <AppStyle>
             <Header/>
-            <Main />
+            <Main/>
             <Passions/>
             <Portfolio/>
             <Footer/>
-        </div>
+        </AppStyle>
     );
 }
 
 export default App;
 
-const Title = styled.h1`
-    font-size: 1.5em;
-    text-align: center;
-    color: #e91e63;
+const AppStyle = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins, sans-serif;
+    font-weight: ${myTheme.font.weights.regular};
 `;
