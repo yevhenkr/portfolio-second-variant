@@ -4,21 +4,28 @@ import {PassionsFront} from "../../../../../assets/icons/passionsFront";
 import {PassionsBack} from "../../../../../assets/icons/passionsBack";
 import {PassionsUI} from "../../../../../assets/icons/passionsUI";
 import {Section} from "../../../ui/section/Section";
+import {myTheme} from "../../../../../styles/Theme.styled";
 
 export const Passions = () => {
     return (
         <Section id={'Passions'}>
-            <StyledH2>Additional passions</StyledH2>
-            <FlexWrapper flexDirection={"row"} justify={"space-around"}>
-                <FlexWrapper flexDirection={"column"}>
+            <StyledH2><SpanFirst>Additional</SpanFirst> <SpanSecond>passions</SpanSecond></StyledH2>
+            <FlexWrapper flexDirection={"row"} justify={"space-around"} max_width={"1170px"} >
+                <FlexWrapper flexDirection={"column"} border={"1px solid black"} borderRadius={"13px"} align_i={"center"} min_width={"350px"} padding={"20px 0"}>
                     <PassionsFront/>
-                    <h3>Front-End Developer</h3>
-                    <span>(Sass, Bootstrap, Tailwind)</span>
+                    <H3Styled>Front-End Developer</H3Styled>
+                    <SpanSkills>(Sass, Bootstrap, Tailwind)</SpanSkills>
                 </FlexWrapper>
-                <FlexWrapper flexDirection={"column"}><PassionsBack/><h3>Back-End Developer</h3><span>
-                    (NodeJS, Laravel, Codeigniter)</span></FlexWrapper>
-                <FlexWrapper flexDirection={"column"}><PassionsUI/><h3>UI/UX Designer</h3><span>
-                    (Figma, Zeplin, Adobe XD)</span></FlexWrapper>
+                <FlexWrapper  flexDirection={"column"} border={"1px solid black"} borderRadius={"13px"} align_i={"center"} min_width={"350px"} padding={"20px 0"}>
+                    <PassionsBack/>
+                    <H3Styled>Back-End Developer</H3Styled>
+                    <SpanSkills>(NodeJS, Laravel, Codeigniter)</SpanSkills>
+                </FlexWrapper>
+                <FlexWrapper  flexDirection={"column"} border={"1px solid black"} borderRadius={"13px"} align_i={"center"} min_width={"350px"} padding={"20px 0"}>
+                    <PassionsUI/>
+                    <H3Styled>UI/UX Designer</H3Styled>
+                    <SpanSkills>(Figma, Zeplin, Adobe XD)</SpanSkills>
+                </FlexWrapper>
             </FlexWrapper>
         </Section>
     );
@@ -28,3 +35,24 @@ export const Passions = () => {
 const StyledH2 = styled.h2`
     text-align: center;
     padding-bottom: 60px`
+const SpanFirst = styled.span`
+    font-weight: ${myTheme.font.weights.regular};
+    font-size: 25px;
+    color: ${myTheme.color.textColor};
+`
+const H3Styled = styled.span`
+    font-weight: ${myTheme.font.weights.semiBold};
+    font-size: 25px;
+    color: ${myTheme.color.black};
+`
+const SpanSkills = styled.span`
+    font-weight: ${myTheme.font.weights.regular};
+    font-size: 18px;
+    color: ${myTheme.color.textColor};
+`
+const SpanSecond = styled.span`
+    font-family: Poppins, sans-serif;
+    font-weight: ${myTheme.font.weights.semiBold};
+    font-size: 25px;
+    
+`

@@ -27,7 +27,7 @@ const StyledDiv = styled.div`
     width: 100%;
 
     min-height: 50px;
-    padding: 12px 16px;
+    padding: 10px 16px;
     display: flex;
     justify-content: space-between;
     background: ${myTheme.color.white};
