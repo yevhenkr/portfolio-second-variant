@@ -6,11 +6,12 @@ import first from "../../../../../assets/img/e-commerce 1 1.jpg";
 import second from "../../../../../assets/img/SendPay 1.jpg";
 import therd from "../../../../../assets/img/Edtech 1.jpg";
 import {Section} from "../../../ui/section/Section";
+import {myTheme} from "../../../../../styles/Theme.styled";
 
 export const Portfolio = () => {
     return (
         <Section >
-            <TitleSection title={"My Portfolio"}/>
+            <TitleSection wordOne={"My"} wordSecond={"Portfolio"}/>
             <FlexWrapper flexDirection={"row"} justify={"space-around"}>
                 <FlexWrapper flexDirection={"column"}>
                     <StyledSpan>Sendpay</StyledSpan>
@@ -31,3 +32,17 @@ export const Portfolio = () => {
 };
 
 const StyledSpan = styled.span``
+
+const StyledH2 = styled.h2`
+    text-align: center;
+    padding-bottom: 60px`
+const SpanFirst = styled.span`
+    font-weight: ${myTheme.font.weights.regular};
+    font-size: 25px;
+    color: ${myTheme.color.textColor};
+`
+const SpanSecond = styled.span`
+    font-family: Poppins, sans-serif;
+    font-weight: ${myTheme.font.weights.semiBold};
+    font-size: 25px;
+`

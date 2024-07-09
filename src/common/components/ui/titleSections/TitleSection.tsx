@@ -1,39 +1,38 @@
 import styled from 'styled-components'
+import React from "react";
+import {myTheme} from "../../../../styles/Theme.styled";
 
 type TitleProps = {
-  title: string
+  wordOne: string
+  wordSecond: string
 }
 
 export const TitleSection = (props: TitleProps) => {
   return (
-      <StyledDiv>
-        <h2>{props.title}</h2>
-      </StyledDiv>
+      <StyledH2>
+          <SpanFirst>{`${props.wordOne}`} </SpanFirst>
+          <SpanSecond>{props.wordSecond}</SpanSecond>
+      </StyledH2>
   )
 }
 
-const StyledDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  h2 {
+const StyledH2 = styled.h2`
+    text-align: center;
+    column-gap: 5px;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
     position: relative;
     margin-top: 0;
     margin-bottom: 80px;
-
-    &::before {
-      content: '';
-
-      position: absolute;
-      bottom: -30px;
-      left: 50%;
-      transform: translateX(-50%);
-
-      width: 55px;
-      height: 1px;
-
-      //background: var(--color-info-500);
-    }
-  }
+`
+const SpanFirst = styled.span`
+    font-weight: ${myTheme.font.weights.regular};
+    font-size: 25px;
+    color: ${myTheme.color.textColor};
+`
+const SpanSecond = styled.span`
+    font-family: Poppins, sans-serif;
+    font-weight: ${myTheme.font.weights.semiBold};
+    font-size: 25px;
 `

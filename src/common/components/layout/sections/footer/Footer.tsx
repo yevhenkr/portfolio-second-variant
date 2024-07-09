@@ -10,26 +10,26 @@ import styled from "styled-components";
 export const Footer = () => {
     return (
         <FlexWrapper id={"footer"} flexDirection={"column"}>
-            <TitleSection title={"Contact Me"} />
+            <TitleSection wordOne={"Contact"} wordSecond={"Me"}/>
             <StyledDiv>
                 <FlexWrapper flexDirection={"column"}>
                     <GithubIcon />
-                    <TitleSection title={"Github"} />
+                    <span>Github</span>
                 </FlexWrapper>
                 <FlexWrapper flexDirection={"column"}>
-                    <InstagramIcon />
-                    <TitleSection title={"Instagram"} />
+                    <InstagramIcon/>
+                    <span>Instagram</span>
                 </FlexWrapper>
                 <FlexWrapper flexDirection={"column"}>
-                    <EmailIcon />
-                    <TitleSection title={"Email"} />
+                    <EmailIcon/>
+                    <span>Email</span>
                 </FlexWrapper>
                 <FlexWrapper flexDirection={"column"}>
-                    <PhoneIcon />
-                    <TitleSection title={"Phone"} />
+                    <PhoneIcon/>
+                    <span>Phone</span>
                 </FlexWrapper>
                 <WaveBackground>
-                    <WaveIcon />
+                <WaveIcon />
                 </WaveBackground>
             </StyledDiv>
         </FlexWrapper>
