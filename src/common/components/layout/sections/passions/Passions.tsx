@@ -12,20 +12,20 @@ export const Passions = () => {
         <Section id={'Passions'}>
             <TitleSection wordOne={"Additional"} wordSecond={"passions"}/>
             <FlexWrapper flexDirection={"row"} justify={"space-around"} max_width={"1170px"}>
-                <FlexWrapper flexDirection={"column"} border={"1px solid black"} borderRadius={"13px"}
-                             align_i={"center"} min_width={"350px"} padding={"20px 0"}>
+                <FlexWrapper flexDirection={"column"} borderRadius={"13px"}
+                             align_i={"center"} min_width={"350px"} padding={"20px 0"} boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <PassionsFront/>
                     <H3Styled>Front-End Developer</H3Styled>
                     <SpanSkills>(Sass, Bootstrap, Tailwind)</SpanSkills>
                 </FlexWrapper>
-                <FlexWrapper flexDirection={"column"} border={"1px solid black"} borderRadius={"13px"}
-                             align_i={"center"} min_width={"350px"} padding={"20px 0"}>
+                <FlexWrapper flexDirection={"column"} borderRadius={"13px"}
+                             align_i={"center"} min_width={"350px"} padding={"20px 0"} boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <PassionsBack/>
                     <H3Styled>Back-End Developer</H3Styled>
                     <SpanSkills>(NodeJS, Laravel, Codeigniter)</SpanSkills>
                 </FlexWrapper>
-                <FlexWrapper flexDirection={"column"} border={"1px solid black"} borderRadius={"13px"}
-                             align_i={"center"} min_width={"350px"} padding={"20px 0"}>
+                <FlexWrapper flexDirection={"column"} borderRadius={"13px"}
+                             align_i={"center"} min_width={"350px"} padding={"20px 0"} boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <PassionsUI/>
                     <H3Styled>UI/UX Designer</H3Styled>
                     <SpanSkills>(Figma, Zeplin, Adobe XD)</SpanSkills>
