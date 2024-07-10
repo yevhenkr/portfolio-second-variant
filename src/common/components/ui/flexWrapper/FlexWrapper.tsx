@@ -29,5 +29,5 @@ export const FlexWrapper = styled.div<FlexWrapperType>`
   border: ${props => props.border || ''};
   border-radius: ${props => props.borderRadius || ''};
   padding: ${props => props.padding ||"0"};
-  box-shadow: ${props => props.boxShadow ||""}
+  box-shadow: ${props => props.boxShadow ||""};
 `
