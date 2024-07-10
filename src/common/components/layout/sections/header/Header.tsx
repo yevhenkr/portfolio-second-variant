@@ -23,11 +23,10 @@ const StyledDiv = styled.div`
     align-items: center;
     z-index: 2;
     top: 0;
-    max-width: 1170px;
     width: 100%;
-
+    max-width: 1628px;
     min-height: 50px;
-    padding: 10px 16px;
+    padding: 0 10px;
     display: flex;
     justify-content: space-between;
     background: ${myTheme.color.white};
