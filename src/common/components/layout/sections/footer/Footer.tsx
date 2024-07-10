@@ -9,7 +9,7 @@ import styled from "styled-components";
 
 export const Footer = () => {
     return (
-        <FlexWrapper id={"footer"} flexDirection={"column"}>
+        <FlexWrapper id={"footer"} flexDirection={"column"} max_width={"1628px"} width={"100%"}>
             <TitleSection wordOne={"Contact"} wordSecond={"Me"}/>
             <StyledDiv>
                 <FlexWrapper flexDirection={"column"}>
@@ -39,7 +39,7 @@ export const Footer = () => {
 const StyledDiv = styled.div`
     position: relative;
     width: 100%;
-    //height: 100vh;
+    max-width: 1070px;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -49,7 +49,8 @@ const WaveBackground = styled.div`
     position: absolute;
     bottom: -24px;
     left: 0;
-    width: 100%;
+    width: 100vh;
+    max-width: 1920px;
     z-index: -1;
 
     svg {

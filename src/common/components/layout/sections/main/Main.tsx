@@ -6,7 +6,7 @@ import {myTheme} from "../../../../../styles/Theme.styled";
 export const Main = () => {
     return (
         <StyledMain id={'Main'}>
-            <FlexWrapper flexDirection={"row"} justify={"space-between"} max_width={"1170px"}>
+            <FlexWrapper flexDirection={"row"} justify={"space-between"} max_width={"1628px"}>
                 <FlexWrapper flexDirection={"column"} max_width={"600px"} width={"100%"}>
                     <StyledSpan>Hi !</StyledSpan>
                     <FlexWrapper flexDirection={"column"} justify={"center"}>
@@ -24,7 +24,7 @@ export const Main = () => {
 };
 
 const StyledMain = styled.main`
-    max-width: 1170px;
+    max-width: 1628px;
     width: 100%;
     padding-bottom: 120px;
     padding-top: 124px;

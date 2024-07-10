@@ -11,7 +11,7 @@ export const Passions = () => {
     return (
         <Section id={'Passions'}>
             <TitleSection wordOne={"Additional"} wordSecond={"passions"}/>
-            <FlexWrapper flexDirection={"row"} justify={"space-around"} max_width={"1170px"}>
+            <FlexWrapper flexDirection={"row"} justify={"space-around"} max_width={"1628"}>
                 <FlexWrapper flexDirection={"column"} borderRadius={"13px"}
                              align_i={"center"} min_width={"350px"} padding={"20px 0"} boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <PassionsFront/>
