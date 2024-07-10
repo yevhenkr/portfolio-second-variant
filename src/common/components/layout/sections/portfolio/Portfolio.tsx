@@ -112,6 +112,5 @@ const StyledImg = styled.img`
     width: 100%;
     position: relative;
     border-radius: 7px;
-
     z-index: 1;
 `

@@ -18,7 +18,7 @@ export const TitleSection = (props: TitleProps) => {
 
 const StyledH2 = styled.h2`
     text-align: center;
-    column-gap: 5px;
+    column-gap: 10px;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -28,11 +28,11 @@ const StyledH2 = styled.h2`
 `
 const SpanFirst = styled.span`
     font-weight: ${myTheme.font.weights.regular};
-    font-size: 25px;
+    font-size: 35px;
     color: ${myTheme.color.textColor};
 `
 const SpanSecond = styled.span`
     font-family: Poppins, sans-serif;
     font-weight: ${myTheme.font.weights.semiBold};
-    font-size: 25px;
+    font-size: 35px;
 `
