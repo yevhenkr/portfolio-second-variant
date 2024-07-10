@@ -39,7 +39,7 @@ export const Footer = () => {
 const StyledDiv = styled.div`
     position: relative;
     width: 100%;
-    max-width: 1070px;
+    max-width: 1628px;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
