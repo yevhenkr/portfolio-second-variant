@@ -5,6 +5,7 @@ export const myTheme = {
         navy: '#002265',
         textColor: '#14279B',
         white: 'rgba(244,244,244,0.98)',
+        smIcon: '#608AF5',
     },
 
     media: {

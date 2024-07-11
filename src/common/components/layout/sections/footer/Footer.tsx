@@ -1,19 +1,13 @@
 import {TitleSection} from "../../../ui/titleSections/TitleSection";
-import {FlexWrapper} from "../../../ui/flexWrapper/FlexWrapper";
 import {GithubIcon} from "../../../../../assets/icons/githubIcon";
 import {InstagramIcon} from "../../../../../assets/icons/instagramIcon";
 import {EmailIcon} from "../../../../../assets/icons/emailIcon";
 import {PhoneIcon} from "../../../../../assets/icons/phoneIcon";
-import {WaveIcon} from "../../../../../assets/icons/WaveIcon";
 import Vector from "../../../../../assets/img/VectorWave.png";
 import styled from "styled-components";
 import {myTheme} from "../../../../../styles/Theme.styled";
-import {SVGProps, useState} from "react";
 
 export const Footer = () => {
-    const [isHovered, setIsHovered] = useState(false);
-    const handleMouseEnter = () => setIsHovered(true);
-    const handleMouseLeave = () => setIsHovered(false);
     const handleCopy = (number:string) => {
         navigator.clipboard.writeText(number).then(() => {
             alert("Номер скопирован в буфер обмена: " + number);
@@ -36,11 +30,11 @@ export const Footer = () => {
                 </LinkStyled>
                 <LinkStyled
                     href={"mailto:vasilenkoevgen88@gmail.com"}>
-                    <EmailIcon fill={isHovered ? `${myTheme.color.smIconHover}` : `${myTheme.color.smIcon}`}/>
+                    <EmailIcon />
                     <span>Email</span>
                 </LinkStyled>
-                <LinkStyled onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    <PhoneIcon fill={isHovered ? `${myTheme.color.smIconHover}` : `${myTheme.color.smIcon}`} onClick={() => handleCopy("+1234567890")} />
+                <LinkStyled >
+                    <PhoneIcon  onClick={() => handleCopy("+1234567890")} />
                     <span>Phone</span>
                 </LinkStyled>
             </StyledDiv>
@@ -70,7 +64,6 @@ const StyledFooter = styled.footer`
         background-repeat: no-repeat;
         background-size: 100%;
     }
-
 `
 
 const StyledDiv = styled.div`
@@ -83,17 +76,16 @@ const StyledDiv = styled.div`
     flex-direction: row;
 `;
 
-
 const LinkStyled = styled.a`
     display: flex;
     flex-direction: column;
-    color: ${myTheme.color.black};
-
-    svg {
-        cursor: pointer;
+    border-radius: 7px;
+    :hover{
+        box-shadow: 0px 0px 10px ${myTheme.color.smIcon};
+        transition: 0.5s;
     }
-
-    span {
+    span{
+        color: ${myTheme.color.black};
         text-align: center;
     }
 `
