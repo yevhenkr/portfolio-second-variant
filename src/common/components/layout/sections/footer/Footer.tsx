@@ -1,37 +1,48 @@
-import { TitleSection } from "../../../ui/titleSections/TitleSection";
-import { FlexWrapper } from "../../../ui/flexWrapper/FlexWrapper";
-import { GithubIcon } from "../../../../../assets/icons/githubIcon";
-import { InstagramIcon } from "../../../../../assets/icons/instagramIcon";
-import { EmailIcon } from "../../../../../assets/icons/emailIcon";
-import { PhoneIcon } from "../../../../../assets/icons/phoneIcon";
-import { WaveIcon } from "../../../../../assets/icons/WaveIcon";
-import  Vector  from "../../../../../assets/img/VectorWave.png";
+import {TitleSection} from "../../../ui/titleSections/TitleSection";
+import {FlexWrapper} from "../../../ui/flexWrapper/FlexWrapper";
+import {GithubIcon} from "../../../../../assets/icons/githubIcon";
+import {InstagramIcon} from "../../../../../assets/icons/instagramIcon";
+import {EmailIcon} from "../../../../../assets/icons/emailIcon";
+import {PhoneIcon} from "../../../../../assets/icons/phoneIcon";
+import {WaveIcon} from "../../../../../assets/icons/WaveIcon";
+import Vector from "../../../../../assets/img/VectorWave.png";
 import styled from "styled-components";
+import {myTheme} from "../../../../../styles/Theme.styled";
+import {SVGProps, useState} from "react";
 
 export const Footer = () => {
+    const [isHovered, setIsHovered] = useState(false);
+    const handleMouseEnter = () => setIsHovered(true);
+    const handleMouseLeave = () => setIsHovered(false);
+    const handleCopy = (number:string) => {
+        navigator.clipboard.writeText(number).then(() => {
+            alert("Номер скопирован в буфер обмена: " + number);
+        }, () => {
+            alert("Ошибка при копировании номера");
+        });
+    };
     return (
-        <StyledFooter >
+        <StyledFooter>
             <TitleSection wordOne={"Contact"} wordSecond={"Me"}/>
             <StyledDiv>
-                <FlexWrapper flexDirection={"column"}>
-                    <GithubIcon />
+                <LinkStyled href={"https://github.com/yevhenkr"}>
+                    <GithubIcon/>
                     <span>Github</span>
-                </FlexWrapper>
-                <FlexWrapper flexDirection={"column"}>
+                </LinkStyled>
+                <LinkStyled
+                    href={"https://www.instagram.com/sd.youth?igsh=OXFleGM0eHV4NzZw"}>
                     <InstagramIcon/>
                     <span>Instagram</span>
-                </FlexWrapper>
-                <FlexWrapper flexDirection={"column"}>
-                    <EmailIcon/>
+                </LinkStyled>
+                <LinkStyled
+                    href={"mailto:vasilenkoevgen88@gmail.com"}>
+                    <EmailIcon fill={isHovered ? `${myTheme.color.smIconHover}` : `${myTheme.color.smIcon}`}/>
                     <span>Email</span>
-                </FlexWrapper>
-                <FlexWrapper flexDirection={"column"}>
-                    <PhoneIcon/>
+                </LinkStyled>
+                <LinkStyled onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                    <PhoneIcon fill={isHovered ? `${myTheme.color.smIconHover}` : `${myTheme.color.smIcon}`} onClick={() => handleCopy("+1234567890")} />
                     <span>Phone</span>
-                </FlexWrapper>
-                {/*<WaveBackground>*/}
-                {/*<WaveIcon />*/}
-                {/*</WaveBackground>*/}
+                </LinkStyled>
             </StyledDiv>
         </StyledFooter>
     );
@@ -65,23 +76,24 @@ const StyledFooter = styled.footer`
 const StyledDiv = styled.div`
     position: relative;
     width: 100%;
-    margin: 0 136px;
+    margin: 0 auto;
     max-width: 1628px;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
 `;
 
-const WaveBackground = styled.div`
-    position: absolute;
-    bottom: -24px;
-    left: 0;
-    width: 100vh;
-    max-width: 1920px;
-    z-index: -1;
+
+const LinkStyled = styled.a`
+    display: flex;
+    flex-direction: column;
+    color: ${myTheme.color.black};
 
     svg {
-        width: 100%;
-        //height: 100%;
+        cursor: pointer;
     }
-`;
+
+    span {
+        text-align: center;
+    }
+`
