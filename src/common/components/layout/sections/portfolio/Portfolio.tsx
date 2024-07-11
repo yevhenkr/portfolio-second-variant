@@ -5,15 +5,14 @@ import {TitleSection} from "../../../ui/titleSections/TitleSection";
 import first from "../../../../../assets/img/Port3.png";
 import second from "../../../../../assets/img/Cards.png";
 import therd from "../../../../../assets/img/SFood.png";
-import {Section} from "../../../ui/section/Section";
 import {myTheme} from "../../../../../styles/Theme.styled";
 
 export const Portfolio = () => {
     return (
-        <Section>
+        <StyledSection>
             <TitleSection wordOne={"My"} wordSecond={"Portfolio"}/>
             <FlexWrapper wrap={"wrap"} gap={"20px"} flexDirection={"row"} justify={"space-around"}>
-                <FlexWrapper flex={"1"} flexDirection={"column"} borderRadius={"13px"}
+                <FlexWrapper backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"} borderRadius={"13px"}
                              align_i={"center"} min_width={"320px"} padding={"15px"}
                              boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <FlexWrapper padding={"10px 0"} flexDirection={"row"} gap={"10px"} justify={"flex-start"}
@@ -29,7 +28,7 @@ export const Portfolio = () => {
                         <StyledImg src={first} alt={"props.alt"}/>
                     </ImageContainer>
                 </FlexWrapper>
-                <FlexWrapper flex={"1"} flexDirection={"column"} borderRadius={"13px"} align_i={"center"} min_width={"320px"} padding={"15px"}
+                <FlexWrapper backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"} borderRadius={"13px"} align_i={"center"} min_width={"320px"} padding={"15px"}
                              boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <FlexWrapper padding={"10px 0"} flexDirection={"row"} gap={"10px"} justify={"flex-start"}
                                  width={"100%"}>
@@ -45,7 +44,7 @@ export const Portfolio = () => {
                         <StyledImg src={second} alt={"props.alt"}/>
                     </ImageContainer>
                 </FlexWrapper>
-                <FlexWrapper flex={"1"} flexDirection={"column"} borderRadius={"13px"}
+                <FlexWrapper backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"} borderRadius={"13px"}
                              align_i={"center"} min_width={"320px"} padding={"15px"}
                              boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <FlexWrapper padding={"10px 0"} flexDirection={"row"} gap={"10px"} justify={"flex-start"}
@@ -62,9 +61,42 @@ export const Portfolio = () => {
                     </ImageContainer>
                 </FlexWrapper>
             </FlexWrapper>
-        </Section>
+        </StyledSection>
     );
 };
+
+const StyledSection = styled.section`
+    padding-bottom: 170px;
+    max-width: 1628px;
+    width: 100%;
+    position: relative;
+z-index: 1;
+    &::after, &::before {
+        content: "";
+        position: absolute;
+        background-color: rgba(69, 129, 246, 0.5);
+        border-radius: 50%;
+        filter: blur(40px);
+        z-index: -1;
+    }
+
+    &::after {
+        width: 100px;
+        height: 100px;
+        top: 17%;
+        left: 10%;
+        z-index: -2;
+        
+    }
+
+    &::before {
+        width: 250px;
+        height: 250px;
+        top: 51%;
+        left: 68%;
+    }
+`
+
 type StyledSpanType = {
     color?: string
     width?: string

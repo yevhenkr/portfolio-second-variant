@@ -6,7 +6,7 @@ import {myTheme} from "../../../../../styles/Theme.styled";
 export const Main = () => {
     return (
         <StyledMain id={'Main'}>
-            <FlexWrapper flexDirection={"row"} justify={"space-between"} max_width={"1628px"}>
+            <StyledDiv>
                 <FlexWrapper flexDirection={"column"} max_width={"600px"} width={"100%"}>
                     <StyledSpan>Hi !</StyledSpan>
                     <FlexWrapper flexDirection={"column"} justify={"center"}>
@@ -18,17 +18,48 @@ export const Main = () => {
                         solving in mind.</StyledP>
                 </FlexWrapper>
                 <UserSVG/>
-            </FlexWrapper>
+            </StyledDiv>
         </StyledMain>
     );
 };
+
+const StyledDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1628px;
+`
 
 const StyledMain = styled.main`
     max-width: 1628px;
     width: 100%;
     padding-bottom: 120px;
     padding-top: 124px;
+    position: relative;
+
+    &::after, &::before {
+        content: "";
+        position: absolute;
+        background-color: rgba(69, 129, 246, 0.5); /* Полупрозрачный синий */
+        border-radius: 50%;
+        filter: blur(60px); /* Размытие */
+        z-index: -1; /* Чтобы элемент был позади контента */
+    }
+    &::after {
+        width: 150px;
+        height: 150px;
+       
+        top: 18%; /* Положение относительно родителя */
+        left: 14%; /* Положение относительно родителя */
+    }
+    &::before {
+        width: 250px;
+        height: 250px;
+        top: 50%; /* Положение относительно родителя */
+        left: 50%; /* Положение относительно родителя */
+    }
 `
+
 const StyledSpan = styled.span`
 `
 const StyledH1 = styled.h1`

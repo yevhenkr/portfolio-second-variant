@@ -14,6 +14,7 @@ type FlexWrapperType = {
   borderRadius?: string
   padding?: string
   boxShadow?: string
+  backgroundColor?: string
 }
 
 export const FlexWrapper = styled.div<FlexWrapperType>`
@@ -32,4 +33,5 @@ export const FlexWrapper = styled.div<FlexWrapperType>`
   border-radius: ${props => props.borderRadius || ''};
   padding: ${props => props.padding ||"0"};
   box-shadow: ${props => props.boxShadow ||""};
+  background-color: ${props => props.backgroundColor ||""};
 `
