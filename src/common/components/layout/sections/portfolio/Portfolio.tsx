@@ -12,8 +12,8 @@ export const Portfolio = () => {
     return (
         <Section>
             <TitleSection wordOne={"My"} wordSecond={"Portfolio"}/>
-            <FlexWrapper flexDirection={"row"} justify={"space-around"}>
-                <FlexWrapper flexDirection={"column"} borderRadius={"13px"}
+            <FlexWrapper wrap={"wrap"} gap={"20px"} flexDirection={"row"} justify={"space-around"}>
+                <FlexWrapper flex={"1"} flexDirection={"column"} borderRadius={"13px"}
                              align_i={"center"} min_width={"320px"} padding={"15px"}
                              boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <FlexWrapper padding={"10px 0"} flexDirection={"row"} gap={"10px"} justify={"flex-start"}
@@ -29,7 +29,7 @@ export const Portfolio = () => {
                         <StyledImg src={first} alt={"props.alt"}/>
                     </ImageContainer>
                 </FlexWrapper>
-                <FlexWrapper flexDirection={"column"} borderRadius={"13px"} align_i={"center"} min_width={"320px"} padding={"15px"}
+                <FlexWrapper flex={"1"} flexDirection={"column"} borderRadius={"13px"} align_i={"center"} min_width={"320px"} padding={"15px"}
                              boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <FlexWrapper padding={"10px 0"} flexDirection={"row"} gap={"10px"} justify={"flex-start"}
                                  width={"100%"}>
@@ -45,7 +45,7 @@ export const Portfolio = () => {
                         <StyledImg src={second} alt={"props.alt"}/>
                     </ImageContainer>
                 </FlexWrapper>
-                <FlexWrapper flexDirection={"column"} borderRadius={"13px"}
+                <FlexWrapper flex={"1"} flexDirection={"column"} borderRadius={"13px"}
                              align_i={"center"} min_width={"320px"} padding={"15px"}
                              boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <FlexWrapper padding={"10px 0"} flexDirection={"row"} gap={"10px"} justify={"flex-start"}
@@ -88,7 +88,7 @@ type DivType = {
 const ImageContainer = styled.div<DivType>`
     position: relative;
     display: block;
-    max-width: 290px;
+    max-width: 450px;
     width: 100%;
     margin-left: auto;
     border-radius: 7px;
@@ -112,5 +112,6 @@ const StyledImg = styled.img`
     width: 100%;
     position: relative;
     border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
     z-index: 1;
 `
