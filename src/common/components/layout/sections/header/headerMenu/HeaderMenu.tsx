@@ -23,7 +23,13 @@ const Menu = styled.ul`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    column-gap: 10px;
+    column-gap: 45px;
+    position: relative;
+    right: 10px;
+    @media (max-width: 768px) {
+        display: none;
+    }
+
 `
 const StyledLi = styled.li`
     display: flex;
