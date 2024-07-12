@@ -55,29 +55,28 @@ const StyledMain = styled.main`
     padding-top: 124px;
     position: relative;
 
-    //&::after, &::before {
-    //    content: "";
-    //    position: absolute;
-    //    background-color: rgba(69, 129, 246, 0.5); /* Полупрозрачный синий */
-    //    border-radius: 50%;
-    //    filter: blur(60px); /* Размытие */
-    //    z-index: -1; /* Чтобы элемент был позади контента */
-    //}
-    //
-    //&::after {
-    //    width: 150px;
-    //    height: 150px;
-    //
-    //    top: 18%; /* Положение относительно родителя */
-    //    left: 14%; /* Положение относительно родителя */
-    //}
-    //
-    //&::before {
-    //    width: 250px;
-    //    height: 250px;
-    //    top: 50%; /* Положение относительно родителя */
-    //    left: 50%; /* Положение относительно родителя */
-    //}
+    &::after, &::before {
+        content: "";
+        position: absolute;
+        background-color: rgba(69, 129, 246, 0.5);
+        border-radius: 50%;
+        filter: blur(60px);
+        z-index: -1;
+    }
+
+    &::after {
+        width: 150px;
+        height: 150px;
+        top: 18%;
+        left: 14%;
+    }
+
+    &::before {
+        width: 250px;
+        height: 250px;
+        top: 50%;
+        left: 50%;
+    }
 `
 
 const StyledSpan = styled.span`

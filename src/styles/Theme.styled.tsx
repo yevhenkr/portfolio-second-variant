@@ -21,10 +21,10 @@ export const myTheme = {
         }
     },
     screen: {
-            extraLarge: 1200,
-            large: 992,
-            medium: 768,
-            small: 576,
+            extraLarge: "1200px",
+            large: "992px",
+            medium: "768px",
+            small: "576px",
     }
 
 }
