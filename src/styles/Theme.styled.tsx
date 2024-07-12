@@ -19,7 +19,14 @@ export const myTheme = {
             semiBold: 600,
             bold: 700,
         }
+    },
+    screen: {
+            extraLarge: 1200,
+            large: 992,
+            medium: 768,
+            small: 576,
     }
+
 }
 
 export const mySections = [

@@ -17,17 +17,35 @@ export const Main = () => {
                         I’am coding with a clean and beautiful problem
                         solving in mind.</StyledP>
                 </FlexWrapper>
-                <UserSVG/>
+                <WrapSvg>
+                    <UserSVG/>
+                </WrapSvg>
             </StyledDiv>
         </StyledMain>
     );
 };
 
+const WrapSvg = styled.div`
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+    @media (max-width: ${myTheme.screen.small}) {
+        width: 290px;
+    }
+`
 const StyledDiv = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     max-width: 1628px;
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
+        max-width: 768px;
+        align-items: center;
+        margin: 0 25px;
+    }
 `
 
 const StyledMain = styled.main`
@@ -37,30 +55,33 @@ const StyledMain = styled.main`
     padding-top: 124px;
     position: relative;
 
-    &::after, &::before {
-        content: "";
-        position: absolute;
-        background-color: rgba(69, 129, 246, 0.5); /* Полупрозрачный синий */
-        border-radius: 50%;
-        filter: blur(60px); /* Размытие */
-        z-index: -1; /* Чтобы элемент был позади контента */
-    }
-    &::after {
-        width: 150px;
-        height: 150px;
-       
-        top: 18%; /* Положение относительно родителя */
-        left: 14%; /* Положение относительно родителя */
-    }
-    &::before {
-        width: 250px;
-        height: 250px;
-        top: 50%; /* Положение относительно родителя */
-        left: 50%; /* Положение относительно родителя */
-    }
+    //&::after, &::before {
+    //    content: "";
+    //    position: absolute;
+    //    background-color: rgba(69, 129, 246, 0.5); /* Полупрозрачный синий */
+    //    border-radius: 50%;
+    //    filter: blur(60px); /* Размытие */
+    //    z-index: -1; /* Чтобы элемент был позади контента */
+    //}
+    //
+    //&::after {
+    //    width: 150px;
+    //    height: 150px;
+    //
+    //    top: 18%; /* Положение относительно родителя */
+    //    left: 14%; /* Положение относительно родителя */
+    //}
+    //
+    //&::before {
+    //    width: 250px;
+    //    height: 250px;
+    //    top: 50%; /* Положение относительно родителя */
+    //    left: 50%; /* Положение относительно родителя */
+    //}
 `
 
 const StyledSpan = styled.span`
+
 `
 const StyledH1 = styled.h1`
     margin: 0;

@@ -40,4 +40,7 @@ const StyledDiv = styled.div`
     justify-content: space-between;
     background: ${myTheme.color.white};
     border-bottom: 1px solid black;
+    @media (max-width: 768px) {
+        padding: 0;
+    }
 `

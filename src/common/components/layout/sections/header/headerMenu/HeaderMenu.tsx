@@ -26,6 +26,7 @@ const Menu = styled.ul`
     column-gap: 45px;
     position: relative;
     right: 10px;
+    padding: 0;
     @media (max-width: 768px) {
         display: none;
     }
