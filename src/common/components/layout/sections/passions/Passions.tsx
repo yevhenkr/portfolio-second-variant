@@ -11,24 +11,24 @@ export const Passions = () => {
         <StyledDiv id={'Passions'}>
             <TitleSection wordOne={"Additional"} wordSecond={"passions"}/>
             <CardsWrap >
-                <FlexWrapper backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"} borderRadius={"13px"}
+                <WrapWithMediaQ backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"} borderRadius={"13px"}
                              align_i={"center"} min_width={"350px"} padding={"50px 0"} boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <PassionsFront/>
                     <H3Styled>Front-End Developer</H3Styled>
                     <SpanSkills>(Sass, Bootstrap, Tailwind)</SpanSkills>
-                </FlexWrapper>
-                <FlexWrapper backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"} borderRadius={"13px"}
+                </WrapWithMediaQ>
+                <WrapWithMediaQ backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"} borderRadius={"13px"}
                              align_i={"center"} min_width={"350px"} padding={"50px 0"} boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <PassionsBack/>
                     <H3Styled>Back-End Developer</H3Styled>
                     <SpanSkills>(NodeJS, Laravel, Codeigniter)</SpanSkills>
-                </FlexWrapper>
-                <FlexWrapper backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"} borderRadius={"13px"}
+                </WrapWithMediaQ>
+                <WrapWithMediaQ backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"} borderRadius={"13px"}
                              align_i={"center"} min_width={"350px"} padding={"50px 0"} boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <PassionsUI/>
                     <H3Styled>UI/UX Designer</H3Styled>
                     <SpanSkills>(Figma, Zeplin, Adobe XD)</SpanSkills>
-                </FlexWrapper>
+                </WrapWithMediaQ>
             </CardsWrap>
         </StyledDiv>
     );
@@ -43,17 +43,13 @@ const CardsWrap = styled.div`
     @media(max-width:${myTheme.screen.medium}){
         flex-direction: column;
         padding: 0 20px;
+        gap: 30px;
     }
 `
-const CardWrap = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    max-width: 1628px;
-    gap: 20px;
+const WrapWithMediaQ = styled(FlexWrapper)`
     @media(max-width:${myTheme.screen.medium}){
+        display: flex;
         flex-direction: column;
-        padding: 0 20px;
     }
 `
 const StyledDiv = styled.section`
