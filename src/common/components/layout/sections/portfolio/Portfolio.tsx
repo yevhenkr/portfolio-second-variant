@@ -12,7 +12,7 @@ export const Portfolio = () => {
         <StyledSection>
             <TitleSection wordOne={"My"} wordSecond={"Portfolio"}/>
             <FlexWrapperWithMediaQuery wrap={"wrap"} gap={"20px"} flexDirection={"row"} justify={"space-around"}>
-                <CardWrapWithMediaQuery backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"}
+                <WrapperWithMediaQ backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"}
                                         borderRadius={"13px"} align_i={"center"} min_width={"320px"} padding={"15px"}
                                         boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <FlexWrapper padding={"10px 0"} flexDirection={"row"} gap={"10px"} justify={"flex-start"}
@@ -23,8 +23,8 @@ export const Portfolio = () => {
                         beforeHeight={"195px"} beforeBackgroundColor={"rgba(108,99,255,0.27)"}>
                         <StyledImg src={first} alt={"props.alt"}/>
                     </ImageContainer>
-                </CardWrapWithMediaQuery>
-                <CardWrapWithMediaQuery backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"}
+                </WrapperWithMediaQ>
+                <WrapperWithMediaQ backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"}
                                         borderRadius={"13px"} align_i={"center"} min_width={"320px"} padding={"15px"}
                                         boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <FlexWrapper padding={"10px 0"} flexDirection={"row"} gap={"10px"} justify={"flex-start"}
@@ -36,8 +36,8 @@ export const Portfolio = () => {
                         beforeHeight={"195px"} beforeBackgroundColor={"rgba(77,194,241,0.25)"}>
                         <StyledImg src={second} alt={"props.alt"}/>
                     </ImageContainer>
-                </CardWrapWithMediaQuery>
-                <CardWrapWithMediaQuery backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"}
+                </WrapperWithMediaQ>
+                <WrapperWithMediaQ backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"}
                                         borderRadius={"13px"}
                                         align_i={"center"} min_width={"320px"} padding={"15px"}
                                         boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
@@ -49,7 +49,7 @@ export const Portfolio = () => {
                         beforeHeight={"195px"} beforeBackgroundColor={"rgba(0,0,0,0.22)"}>
                         <StyledImg src={therd} alt={"props.alt"}/>
                     </ImageContainer>
-                </CardWrapWithMediaQuery>
+                </WrapperWithMediaQ>
             </FlexWrapperWithMediaQuery>
         </StyledSection>
     );
@@ -58,15 +58,18 @@ const FlexWrapperWithMediaQuery = styled(FlexWrapper)`
     @media (max-width: ${myTheme.screen.medium}) {
         display: flex;
         gap: 30px;
+        max-width: 100%;
         flex-direction: column;
         align-items: center;
     }`
 
-const CardWrapWithMediaQuery = styled(FlexWrapper)`
+const WrapperWithMediaQ = styled(FlexWrapper)`
     @media (max-width: ${myTheme.screen.medium}) {
+        display: flex;
         flex-direction: column;
         align-items: center;
         padding-left: 90px;
+        max-width: 100%;
         top: -50px;
         left: -80px;
     }`
@@ -131,6 +134,7 @@ type DivType = {
     beforeHeight?: string;
     beforeBackgroundColor?: string;
 }
+
 const ImageContainer = styled.div<DivType>`
     position: relative;
     display: block;
@@ -151,17 +155,24 @@ const ImageContainer = styled.div<DivType>`
         left: -30px;
         z-index: 0;
     }
+
     @media (max-width: ${myTheme.screen.medium}) {
+        max-width: calc(100% - 30px);
+        width: 600px;
+
         &::before {
-            top: -50px;
-            left: -70px;
+            width: 250px;
+            height: 250px;
+            top: -70px;
+            left: -100px;
         }
     }
 `
 
 const StyledImg = styled.img`
     display: block;
-    width: 100%;
+    width: 765px;
+    max-width: 100%;
     position: relative;
     border-radius: 7px;
     border: 1px solid rgba(0, 0, 0, 0.3);
