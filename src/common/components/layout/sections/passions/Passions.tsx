@@ -10,9 +10,9 @@ export const Passions = () => {
     return (
         <StyledDiv id={'Passions'}>
             <TitleSection wordOne={"Additional"} wordSecond={"passions"}/>
-            <FlexWrapper wrap={"wrap"} flexDirection={"row"} justify={"space-around"} max_width={"1628"} gap={"20px"}>
+            <CardsWrap >
                 <FlexWrapper backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"} borderRadius={"13px"}
-                             align_i={"center"} max_width={ "500px"} min_width={"350px"} padding={"50px 0"} boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
+                             align_i={"center"} min_width={"350px"} padding={"50px 0"} boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <PassionsFront/>
                     <H3Styled>Front-End Developer</H3Styled>
                     <SpanSkills>(Sass, Bootstrap, Tailwind)</SpanSkills>
@@ -29,11 +29,33 @@ export const Passions = () => {
                     <H3Styled>UI/UX Designer</H3Styled>
                     <SpanSkills>(Figma, Zeplin, Adobe XD)</SpanSkills>
                 </FlexWrapper>
-            </FlexWrapper>
+            </CardsWrap>
         </StyledDiv>
     );
 };
 
+const CardsWrap = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1628px;
+    gap: 20px;
+    @media(max-width:${myTheme.screen.medium}){
+        flex-direction: column;
+        padding: 0 20px;
+    }
+`
+const CardWrap = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1628px;
+    gap: 20px;
+    @media(max-width:${myTheme.screen.medium}){
+        flex-direction: column;
+        padding: 0 20px;
+    }
+`
 const StyledDiv = styled.section`
     padding-bottom: 170px;
     max-width: 1628px;
@@ -55,7 +77,7 @@ const StyledDiv = styled.section`
         top: 10%;
         left: 10%;
         @media (max-width:${myTheme.screen.medium}) {
-            position: absolute;
+            display: none;
         }
     }
 
@@ -65,8 +87,11 @@ const StyledDiv = styled.section`
         top: 50%;
         left: 50%;
         @media (max-width: ${myTheme.screen.medium}) {
-            position: absolute;
+            display: none;
         }
+    }
+    @media (max-width:${myTheme.screen.medium}) {
+        //width: 90%;
     }
 `
 

@@ -25,6 +25,10 @@ const StyledH2 = styled.h2`
     position: relative;
     margin-top: 0;
     margin-bottom: 80px;
+
+    @media (max-width: ${myTheme.screen.medium}) {
+        margin-bottom: 30px;
+    }
 `
 const SpanFirst = styled.span`
     font-weight: ${myTheme.font.weights.regular};

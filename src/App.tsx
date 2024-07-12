@@ -11,7 +11,7 @@ function App() {
         <AppStyle>
             <Header/>
             <Main/>
-            {/*<Passions/>*/}
+            <Passions/>
             {/*<Portfolio/>*/}
             {/*<Footer/>*/}
         </AppStyle>

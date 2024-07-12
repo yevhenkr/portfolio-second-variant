@@ -77,6 +77,10 @@ const StyledMain = styled.main`
         top: 50%;
         left: 50%;
     }
+    
+    @media (max-width:  ${myTheme.screen.medium}) {
+        padding-bottom: 70px;
+    }
 `
 
 const StyledSpan = styled.span`
