@@ -30,7 +30,7 @@ const AppStyle = styled.div`
     font-size: 35px;
     color: ${myTheme.color.navy};
     
-    @media (max-width:768px) {
+    @media (max-width:${myTheme.screen.medium}) {
         max-width: 768px;
         width: 100%;
     }

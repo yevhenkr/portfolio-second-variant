@@ -40,7 +40,7 @@ const StyledDiv = styled.div`
     flex-direction: row;
     justify-content: space-between;
     max-width: 1628px;
-    @media (max-width: 768px) {
+    @media (max-width: ${myTheme.screen.medium}) {
         flex-direction: column-reverse;
         max-width: 768px;
         align-items: center;
@@ -65,15 +65,15 @@ const StyledMain = styled.main`
     }
 
     &::after {
-        width: 150px;
-        height: 150px;
+        width: 80px;
+        height: 80px;
         top: 18%;
         left: 14%;
     }
 
     &::before {
-        width: 250px;
-        height: 250px;
+        width: 150px;
+        height: 150px;
         top: 50%;
         left: 50%;
     }

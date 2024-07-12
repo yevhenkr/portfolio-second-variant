@@ -20,7 +20,7 @@ export const Header = () => {
 const MobileBurger = styled.a`
     display: none;
     position: relative;
-    @media (max-width: 768px) {
+    @media (max-width: ${myTheme.screen.medium}) {
         display: flex;
         right: 10px;
     }
@@ -40,7 +40,7 @@ const StyledDiv = styled.div`
     justify-content: space-between;
     background: ${myTheme.color.white};
     border-bottom: 1px solid black;
-    @media (max-width: 768px) {
+    @media (max-width: ${myTheme.screen.medium}) {
         padding: 0;
     }
 `

@@ -54,7 +54,7 @@ const StyledDiv = styled.section`
         height: 150px;
         top: 10%;
         left: 10%;
-        @media (max-width: 768px) {
+        @media (max-width:${myTheme.screen.medium}) {
             position: absolute;
         }
     }
@@ -64,7 +64,7 @@ const StyledDiv = styled.section`
         height: 250px;
         top: 50%;
         left: 50%;
-        @media (max-width: 768px) {
+        @media (max-width: ${myTheme.screen.medium}) {
             position: absolute;
         }
     }

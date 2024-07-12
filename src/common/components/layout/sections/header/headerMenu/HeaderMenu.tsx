@@ -27,7 +27,7 @@ const Menu = styled.ul`
     position: relative;
     right: 10px;
     padding: 0;
-    @media (max-width: 768px) {
+    @media (max-width: ${myTheme.screen.medium}) {
         display: none;
     }
 
