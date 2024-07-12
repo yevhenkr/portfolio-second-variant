@@ -74,6 +74,12 @@ const StyledDiv = styled.div`
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+
+    @media (max-width: ${myTheme.screen.medium}) {
+       flex-direction: column;
+        align-items: center;
+        gap: 70px;
+    }
 `;
 
 const LinkStyled = styled.a`
@@ -87,5 +93,10 @@ const LinkStyled = styled.a`
     span{
         color: ${myTheme.color.black};
         text-align: center;
+    }
+    @media (max-width: ${myTheme.screen.medium}) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 `

@@ -91,7 +91,7 @@ const StyledDiv = styled.section`
         }
     }
     @media (max-width:${myTheme.screen.medium}) {
-        //width: 90%;
+        padding-bottom: 70px;
     }
 `
 
