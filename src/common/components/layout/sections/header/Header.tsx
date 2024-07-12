@@ -4,6 +4,7 @@ import {LogoIcon} from "../../../../../assets/icons/LogoIcon";
 import {FlexWrapper} from "../../../ui/flexWrapper/FlexWrapper";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
 import {myTheme} from "../../../../../styles/Theme.styled";
+import {BurgerIcon} from "../../../../../assets/icons/burgerIcon";
 
 export const Header = () => {
     return (
@@ -12,10 +13,18 @@ export const Header = () => {
                 <LogoIcon/>
             </FlexWrapper>
             <HeaderMenu />
+            <MobileBurger><BurgerIcon/></MobileBurger>
         </StyledDiv>
     );
 };
-
+const MobileBurger = styled.a`
+    display: none;
+    position: relative;
+    @media (max-width: 768px) {
+        display: flex;
+        right: 10px;
+    }
+`
 
 const StyledDiv = styled.div`
     position: fixed;

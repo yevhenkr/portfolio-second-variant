@@ -29,4 +29,9 @@ const AppStyle = styled.div`
     font-weight: ${myTheme.font.weights.regular};
     font-size: 35px;
     color: ${myTheme.color.navy};
+    
+    @media (max-width:768px) {
+        max-width: 768px;
+        width: 100%;
+    }
 `;

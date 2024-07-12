@@ -39,6 +39,13 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-width: 365px;
+
+    @media (max-width:768px) {
+        max-width: 768px;
+        width: 100%;
+    }
+
 }
 
 code {
@@ -50,6 +57,11 @@ h2,h3,h4,h5,h6{
     margin: 0;
 }
 
-a {
+a,button {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    color: inherit;
     text-decoration: none;
 }
