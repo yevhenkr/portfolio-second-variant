@@ -21,7 +21,7 @@ export const Portfolio = () => {
     );
 };
 const FlexWrapperWithMediaQuery = styled(FlexWrapper)`
-    
+
     @media (max-width: ${myTheme.screen.medium}) {
         display: flex;
         flex-wrap: wrap;
@@ -31,21 +31,7 @@ const FlexWrapperWithMediaQuery = styled(FlexWrapper)`
         flex-direction: column;
         align-items: center;
         gap: 30px;
-        
-    }`
 
-const WrapperWithMediaQ = styled(FlexWrapper)`
-    @media (max-width: ${myTheme.screen.medium}) {
-        flex: 1 1 calc(33.33% - 40px);
-        box-sizing: border-box;
-        min-width: 250px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-left: 90px;
-        max-width: 100%;
-        top: -50px;
-        left: -80px;
     }`
 
 const StyledSection = styled.section`
@@ -86,69 +72,4 @@ const StyledSection = styled.section`
             display: none;
         }
     }
-`
-
-type StyledSpanType = {
-    color?: string
-    width?: string
-}
-
-const StyledSpan = styled.span<StyledSpanType>`
-    color: ${props => props.color || ""};
-    width: ${props => props.width || ""};
-    font-weight: ${myTheme.font.weights.semiBold};
-    font-size: 25px;
-    display: flex;
-    align-items: center;
-`
-
-type DivType = {
-    beforeContent?: string;
-    beforeWidth?: string;
-    beforeHeight?: string;
-    beforeBackgroundColor?: string;
-}
-
-const ImageContainer = styled.div<DivType>`
-    position: relative;
-    display: block;
-    max-width: 450px;
-    width: 100%;
-    margin-left: auto;
-    border-radius: 7px;
-    border: 1px solid rgba(0, 0, 0, 0.09);
-
-    &::before {
-        content: ${props => `'${props.beforeContent || ''}'`};
-        position: absolute;
-        width: ${props => props.beforeWidth || ''};
-        height: ${props => props.beforeHeight || ''};
-        background-color: ${props => props.beforeBackgroundColor || ''};
-        border-radius: 50%;
-        top: -60px;
-        left: -30px;
-        z-index: 0;
-    }
-
-    @media (max-width: ${myTheme.screen.medium}) {
-        max-width: calc(100% - 30px);
-        width: 600px;
-
-        &::before {
-            width: 250px;
-            height: 250px;
-            top: -70px;
-            left: -100px;
-        }
-    }
-`
-
-const StyledImg = styled.img`
-    display: block;
-    width: 765px;
-    max-width: 100%;
-    position: relative;
-    border-radius: 7px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    z-index: 1;
 `
