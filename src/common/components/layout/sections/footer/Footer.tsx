@@ -30,20 +30,28 @@ export const Footer = () => {
                 </LinkStyled>
                 <LinkStyled
                     href={"mailto:vasilenkoevgen88@gmail.com"}>
-                    <EmailIcon />
+                    <EmailIcon/>
                     <span>Email</span>
                 </LinkStyled>
-                <LinkStyled >
-                    <PhoneIcon  onClick={() => handleCopy("+1234567890")} />
+                <LinkStyled>
+                    <PhoneIcon onClick={() => handleCopy("+1234567890")}/>
                     <span>Phone</span>
                 </LinkStyled>
             </StyledDiv>
+            <DesignSpan>  Design By Rauliqbal</DesignSpan>
         </StyledFooter>
     );
 };
 
 
-
+const DesignSpan = styled.span`
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 20px;
+    text-align: center;
+    display: flex;
+color: black`
 const StyledDiv = styled.div`
     position: relative;
     width: 100%;
@@ -84,9 +92,12 @@ const StyledFooter = styled.footer`
     flex-direction: column;
     width: 100%;
     position: relative;
+    align-items: center;
+    overflow: hidden;
     @media (max-width: ${myTheme.screen.medium}) {
         padding-bottom: 180px;
     }
+
     &::after {
         content: "";
         position: absolute;
@@ -112,7 +123,7 @@ const StyledFooter = styled.footer`
             transform: translate(-50%, 0); /* Центрируем фон по горизонтали */
             overflow: clip;
             background-size: cover; /* Изменяем на cover, чтобы изображение полностью покрывало элемент */
-            
+
         }
     }
 `
