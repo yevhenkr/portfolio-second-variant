@@ -9,7 +9,7 @@ import {BurgerIcon} from "../../../../../assets/icons/burgerIcon";
 export const Header = () => {
     return (
         <StyledDiv>
-            <FlexWrapper align_i={"center"}>
+            <FlexWrapper display={"flex"} align_i={"center"}>
                 <LogoIcon/>
             </FlexWrapper>
             <HeaderMenu />
