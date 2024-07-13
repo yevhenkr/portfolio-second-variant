@@ -5,6 +5,7 @@ import {myTheme} from "../../../../../styles/Theme.styled";
 
 type PropsType = {
     img?: string;
+    link: string;
     bgColor: string;
     color: string;
     label: string;
@@ -19,16 +20,19 @@ export const PortfolioCard = (props: PropsType) => {
                          width={"100%"}>
                 <StyledSpan color={`${props.color}`}>{props.label}</StyledSpan>
             </FlexWrapper>
-            <ImageContainer beforeContent={""} beforeWidth={"195px"}
-                            beforeHeight={"195px"} beforeBackgroundColor={`${props.bgColor}`}>
-                <StyledImg src={`${props.img}`} alt={"props.alt"}/>
-            </ImageContainer>
+            <a href={props.link}>
+                <ImageContainer beforeContent={""} beforeWidth={"195px"}
+                                beforeHeight={"195px"} beforeBackgroundColor={`${props.bgColor}`}>
+                    <StyledImg src={`${props.img}`} alt={"props.alt"}/>
+                </ImageContainer></a>
+
         </WrapperWithMediaQ>
 
     );
 };
 
 const WrapperWithMediaQ = styled(FlexWrapper)`
+ 
     @media (max-width: ${myTheme.screen.medium}) {
         flex: 1 1 calc(33.33% - 40px);
         box-sizing: border-box;
@@ -114,4 +118,8 @@ const StyledImg = styled.img`
     border-radius: 7px;
     border: 1px solid rgba(0, 0, 0, 0.3);
     z-index: 1;
+
+    :hover{
+        filter: blur(2px);
+    }
 `

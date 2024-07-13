@@ -13,9 +13,9 @@ export const Portfolio = () => {
         <StyledSection>
             <TitleSection wordOne={"My"} wordSecond={"Portfolio"}/>
             <FlexWrapperWithMediaQuery wrap={"wrap"} gap={"20px"} flexDirection={"row"} justify={"space-around"}>
-                <PortfolioCard label={"Portfolio"} bgColor={"rgba(108,99,255,0.27)"} color={"#6C63FF"} img={first}/>
-                <PortfolioCard label={"Cards"} bgColor={"rgba(77,194,241,0.25)"} color={"#4581F6"} img={second}/>
-                <PortfolioCard label={"Simple food"} bgColor={"rgba(0,0,0,0.22)"} color={`${myTheme.color.black}`} img={therd}/>
+                <PortfolioCard link={"https://vasilenko-evgen-xd8s.vercel.app/"} label={"Portfolio"} bgColor={"rgba(108,99,255,0.27)"} color={"#6C63FF"} img={first}/>
+                <PortfolioCard link={"https://github.com/MrEvgeniy1989/cards"} label={"Cards"} bgColor={"rgba(77,194,241,0.25)"} color={"#4581F6"} img={second}/>
+                <PortfolioCard link={"https://simpel-food.vercel.app/"} label={"Simple food"} bgColor={"rgba(0,0,0,0.22)"} color={`${myTheme.color.black}`} img={therd}/>
             </FlexWrapperWithMediaQuery>
         </StyledSection>
     );
