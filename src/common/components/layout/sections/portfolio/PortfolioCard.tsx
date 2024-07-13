@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../ui/flexWrapper/FlexWrapper";
-import first from "../../../../../assets/img/Port3.png";
 import {myTheme} from "../../../../../styles/Theme.styled";
 
 type PropsType = {
     img?: string;
     bgColor: string;
     color: string;
+    label: string;
 }
 
 export const PortfolioCard = (props: PropsType) => {
@@ -17,7 +17,7 @@ export const PortfolioCard = (props: PropsType) => {
                            boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
             <FlexWrapper padding={"10px 0"} flexDirection={"row"} gap={"10px"} justify={"flex-start"}
                          width={"100%"}>
-                <StyledSpan color={`${props.color}`}>Portfolio</StyledSpan>
+                <StyledSpan color={`${props.color}`}>{props.label}</StyledSpan>
             </FlexWrapper>
             <ImageContainer beforeContent={""} beforeWidth={"195px"}
                             beforeHeight={"195px"} beforeBackgroundColor={`${props.bgColor}`}>

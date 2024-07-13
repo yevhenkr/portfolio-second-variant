@@ -13,9 +13,9 @@ export const Portfolio = () => {
         <StyledSection>
             <TitleSection wordOne={"My"} wordSecond={"Portfolio"}/>
             <FlexWrapperWithMediaQuery wrap={"wrap"} gap={"20px"} flexDirection={"row"} justify={"space-around"}>
-                <PortfolioCard bgColor={"rgba(108,99,255,0.27)"} color={"#6C63FF"} img={first}/>
-                <PortfolioCard bgColor={"rgba(77,194,241,0.25)"} color={"#4581F6"} img={second}/>
-                <PortfolioCard bgColor={"rgba(0,0,0,0.22)"} color={`${myTheme.color.black}`} img={therd}/>
+                <PortfolioCard label={"Portfolio"} bgColor={"rgba(108,99,255,0.27)"} color={"#6C63FF"} img={first}/>
+                <PortfolioCard label={"Cards"} bgColor={"rgba(77,194,241,0.25)"} color={"#4581F6"} img={second}/>
+                <PortfolioCard label={"Simple food"} bgColor={"rgba(0,0,0,0.22)"} color={`${myTheme.color.black}`} img={therd}/>
             </FlexWrapperWithMediaQuery>
         </StyledSection>
     );
