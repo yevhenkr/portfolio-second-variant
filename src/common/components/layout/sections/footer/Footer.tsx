@@ -84,7 +84,9 @@ const StyledFooter = styled.footer`
     flex-direction: column;
     width: 100%;
     position: relative;
-
+    @media (max-width: ${myTheme.screen.medium}) {
+        padding-bottom: 180px;
+    }
     &::after {
         content: "";
         position: absolute;
@@ -101,9 +103,16 @@ const StyledFooter = styled.footer`
         background-size: 100%;
 
         @media (max-width: ${myTheme.screen.medium}) {
-            height: 156px;
-            transform: translateY(0);
-overflow: clip;
+            right: 50%;
+            left: 50%;
+            width: 150vw; /* Увеличиваем ширину фона */
+            height: 200vh; /* Увеличиваем высоту фона */
+            max-height: 760px; /* Увеличиваем максимальную высоту */
+            height: 390px; /* Увеличиваем высоту для маленьких экранов */
+            transform: translate(-50%, 0); /* Центрируем фон по горизонтали */
+            overflow: clip;
+            background-size: cover; /* Изменяем на cover, чтобы изображение полностью покрывало элемент */
+            
         }
     }
 `
