@@ -10,41 +10,46 @@ export const Passions = () => {
     return (
         <StyledDiv id={'Passions'}>
             <TitleSection wordOne={"Additional"} wordSecond={"passions"}/>
-            <CardsWrap>
-                <WrapWithMediaQ backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"} borderRadius={"13px"}
-                                align_i={"center"} min_width={"250px"} padding={"50px 0"} boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
+            <PassionsWrap>
+                <WrapWithMediaQ backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"}
+                                borderRadius={"13px"}
+                                align_i={"center"} min_width={"250px"} padding={"50px 0"}
+                                boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <PassionsFront/>
                     <H3Styled>Front-End Developer</H3Styled>
                     <SpanSkills>(Sass, Bootstrap, Tailwind)</SpanSkills>
                 </WrapWithMediaQ>
-                <WrapWithMediaQ backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"} borderRadius={"13px"}
-                                align_i={"center"} min_width={"250px"} padding={"50px 0"} boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
+                <WrapWithMediaQ backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"}
+                                borderRadius={"13px"}
+                                align_i={"center"} min_width={"250px"} padding={"50px 0"}
+                                boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <PassionsBack/>
                     <H3Styled>Back-End Developer</H3Styled>
                     <SpanSkills>(NodeJS, Laravel, Codeigniter)</SpanSkills>
                 </WrapWithMediaQ>
-                <WrapWithMediaQ backgroundColor={`${myTheme.color.white}`} flex={"1"} flexDirection={"column"} borderRadius={"13px"}
-                                align_i={"center"} min_width={"250px"} padding={"50px 0"} boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
+                <WrapWithMediaQ backgroundColor={`${myTheme.color.white}`} flex={"1"} borderRadius={"13px"}
+                                align_i={"center"} min_width={"250px"} padding={"50px 0"}
+                                boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.5)"}>
                     <PassionsUI/>
                     <H3Styled>UI/UX Designer</H3Styled>
                     <SpanSkills>(Figma, Zeplin, Adobe XD)</SpanSkills>
                 </WrapWithMediaQ>
-            </CardsWrap>
+            </PassionsWrap>
         </StyledDiv>
     );
 };
 
-const CardsWrap = styled.div`
+const PassionsWrap = styled.div`
+    max-width: 1628px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    max-width: 100%;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 50px;
     padding: 20px;
     box-sizing: border-box;
-
     @media (max-width: ${myTheme.screen.medium}) {
+        flex-wrap: wrap;
         flex-direction: column;
         gap: 30px;
         padding: 20px;
@@ -53,11 +58,13 @@ const CardsWrap = styled.div`
 `
 
 const WrapWithMediaQ = styled(FlexWrapper)`
-    flex: 1 1 calc(33.33% - 40px);
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     min-width: 250px;
-
-    @media(max-width:${myTheme.screen.medium}){
+    background-color: ${myTheme.color.white};
+    @media (max-width: ${myTheme.screen.medium}) {
+        flex: 1 1 calc(33.33% - 40px);
         flex: 1 1 100%;
         display: flex;
         flex-direction: column;
@@ -85,7 +92,7 @@ const StyledDiv = styled.section`
         height: 150px;
         top: 10%;
         left: 10%;
-        @media (max-width:${myTheme.screen.medium}) {
+        @media (max-width: ${myTheme.screen.medium}) {
             display: none;
         }
     }
@@ -103,8 +110,9 @@ const StyledDiv = styled.section`
         top: 50%;
         left: 19%;
     }
+
     &::after, &::before {
-        @media (max-width:${myTheme.screen.medium}) {
+        @media (max-width: ${myTheme.screen.medium}) {
             height: 0;
             width: 0;
             overflow: hidden;
@@ -112,7 +120,7 @@ const StyledDiv = styled.section`
         }
     }
 
-    @media (max-width:${myTheme.screen.medium}) {
+    @media (max-width: ${myTheme.screen.medium}) {
         padding-bottom: 70px;
     }
 `
