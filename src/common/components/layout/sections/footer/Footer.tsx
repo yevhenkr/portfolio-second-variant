@@ -8,7 +8,7 @@ import styled from "styled-components";
 import {myTheme} from "../../../../../styles/Theme.styled";
 
 export const Footer = () => {
-    const handleCopy = (number:string) => {
+    const handleCopy = (number: string) => {
         navigator.clipboard.writeText(number).then(() => {
             alert("Номер скопирован в буфер обмена: " + number);
         }, () => {
@@ -38,7 +38,7 @@ export const Footer = () => {
                     <span>Phone</span>
                 </LinkStyled>
             </StyledDiv>
-            <DesignSpan>  Design By Rauliqbal</DesignSpan>
+            <DesignSpan> Design By Rauliqbal</DesignSpan>
         </StyledFooter>
     );
 };
@@ -51,7 +51,8 @@ const DesignSpan = styled.span`
     bottom: 20px;
     text-align: center;
     display: flex;
-color: black`
+    color: black`
+
 const StyledDiv = styled.div`
     position: relative;
     width: 100%;
@@ -62,7 +63,7 @@ const StyledDiv = styled.div`
     flex-direction: row;
 
     @media (max-width: ${myTheme.screen.medium}) {
-       flex-direction: column;
+        flex-direction: column;
         align-items: center;
         gap: 70px;
     }
@@ -72,20 +73,24 @@ const LinkStyled = styled.a`
     display: flex;
     flex-direction: column;
     border-radius: 7px;
-    :hover{
+
+    :hover {
         box-shadow: 0px 0px 10px ${myTheme.color.smIcon};
         transition: 0.5s;
     }
-    span{
+
+    span {
         color: ${myTheme.color.black};
         text-align: center;
     }
+
     @media (max-width: ${myTheme.screen.medium}) {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 `
+
 const StyledFooter = styled.footer`
     id: "#footer";
     display: flex;
@@ -95,7 +100,7 @@ const StyledFooter = styled.footer`
     align-items: center;
     overflow: hidden;
     padding-bottom: 225px;
-    
+
     @media (max-width: ${myTheme.screen.medium}) {
         padding-bottom: 180px;
     }
@@ -118,13 +123,13 @@ const StyledFooter = styled.footer`
         @media (max-width: ${myTheme.screen.medium}) {
             right: 50%;
             left: 50%;
+            bottom: 0;
             width: 150vw;
             max-height: 760px;
             height: 390px;
             transform: translate(-50%, 0);
             overflow: clip;
             background-size: cover;
-
         }
     }
 `
