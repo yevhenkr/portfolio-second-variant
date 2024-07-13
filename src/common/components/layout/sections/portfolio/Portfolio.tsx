@@ -21,9 +21,9 @@ export const Portfolio = () => {
     );
 };
 const FlexWrapperWithMediaQuery = styled(FlexWrapper)`
-
-    @media (max-width: ${myTheme.screen.medium}) {
         display: flex;
+flex-direction: row;
+    @media (max-width: ${myTheme.screen.medium}) {
         flex-wrap: wrap;
         box-sizing: border-box;
         padding: 20px;
