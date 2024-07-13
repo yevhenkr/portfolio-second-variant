@@ -55,16 +55,24 @@ export const Portfolio = () => {
     );
 };
 const FlexWrapperWithMediaQuery = styled(FlexWrapper)`
+    
     @media (max-width: ${myTheme.screen.medium}) {
         display: flex;
-        gap: 30px;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        padding: 20px;
         max-width: 100%;
         flex-direction: column;
         align-items: center;
+        gap: 30px;
+        
     }`
 
 const WrapperWithMediaQ = styled(FlexWrapper)`
     @media (max-width: ${myTheme.screen.medium}) {
+        flex: 1 1 calc(33.33% - 40px);
+        box-sizing: border-box;
+        min-width: 250px;
         display: flex;
         flex-direction: column;
         align-items: center;

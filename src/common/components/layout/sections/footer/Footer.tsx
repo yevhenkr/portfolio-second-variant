@@ -42,29 +42,7 @@ export const Footer = () => {
     );
 };
 
-const StyledFooter = styled.footer`
-    id: "#footer";
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: relative;
 
-    &::before {
-        content: "";
-        position: absolute;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: -1;
-        width: 100%;
-        height: 36vh;
-        max-height: 380px;
-        transform: translateY(50%);
-        background-image: url(${Vector});
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
-`
 
 const StyledDiv = styled.div`
     position: relative;
@@ -98,5 +76,34 @@ const LinkStyled = styled.a`
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+`
+const StyledFooter = styled.footer`
+    id: "#footer";
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 100%;
+        height: 36vh;
+        max-height: 380px;
+        transform: translateY(50%);
+        background-image: url(${Vector});
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        @media (max-width: ${myTheme.screen.medium}) {
+            height: 156px;
+            transform: translateY(0);
+overflow: clip;
+        }
     }
 `

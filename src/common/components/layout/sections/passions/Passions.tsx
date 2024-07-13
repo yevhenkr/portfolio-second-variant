@@ -98,14 +98,20 @@ const StyledDiv = styled.section`
     }
 
     &::before {
-        width: 250px;
-        height: 250px;
+        width: 1px;
+        height: 1px;
         top: 50%;
-        left: 50%;
-        @media (max-width: ${myTheme.screen.medium}) {
+        left: 19%;
+    }
+    &::after, &::before {
+        @media (max-width:${myTheme.screen.medium}) {
+            height: 0;
+            width: 0;
+            overflow: hidden;
             display: none;
         }
     }
+
     @media (max-width:${myTheme.screen.medium}) {
         padding-bottom: 70px;
     }
