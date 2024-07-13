@@ -61,7 +61,7 @@ const WrapWithMediaQ = styled(FlexWrapper)`
         flex: 1 1 100%;
         display: flex;
         flex-direction: column;
-        padding: 0;
+        padding: 20px 0;
     }
 `
 
