@@ -94,6 +94,8 @@ const StyledFooter = styled.footer`
     position: relative;
     align-items: center;
     overflow: hidden;
+    padding-bottom: 225px;
+    
     @media (max-width: ${myTheme.screen.medium}) {
         padding-bottom: 180px;
     }
@@ -103,11 +105,11 @@ const StyledFooter = styled.footer`
         position: absolute;
         right: 0;
         left: 0;
-        bottom: 0;
+        bottom: 218px;
         z-index: -1;
-        width: 100%;
-        height: 36vh;
-        max-height: 380px;
+        width: 100vw;
+        height: 200vh;
+        max-height: 535px;
         transform: translateY(50%);
         background-image: url(${Vector});
         background-repeat: no-repeat;
@@ -116,13 +118,12 @@ const StyledFooter = styled.footer`
         @media (max-width: ${myTheme.screen.medium}) {
             right: 50%;
             left: 50%;
-            width: 150vw; /* Увеличиваем ширину фона */
-            height: 200vh; /* Увеличиваем высоту фона */
-            max-height: 760px; /* Увеличиваем максимальную высоту */
-            height: 390px; /* Увеличиваем высоту для маленьких экранов */
-            transform: translate(-50%, 0); /* Центрируем фон по горизонтали */
+            width: 150vw;
+            max-height: 760px;
+            height: 390px;
+            transform: translate(-50%, 0);
             overflow: clip;
-            background-size: cover; /* Изменяем на cover, чтобы изображение полностью покрывало элемент */
+            background-size: cover;
 
         }
     }
