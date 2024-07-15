@@ -40,7 +40,7 @@ const WrapperWithMediaQ = styled(FlexWrapper)`
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-left: 20%;
+        padding-left: 105px;
         max-width: 100%;
         top: -50px;
         left: -80px;
@@ -95,8 +95,19 @@ const ImageContainer = styled.div<DivType>`
         &::before {
             width: 280px;
             height: 280px;
-            top: -64px;
-            left: -152px;
+            top: -70px;
+            left: -120px;
+        }
+    }
+    
+    @media (max-width: ${myTheme.screen.small}) {
+        max-width: calc(100% - 30px);
+        width: 410px;
+
+        &::before {
+            width: 280px;
+            height: 280px;
+            left: -110px;
         }
     }
 
