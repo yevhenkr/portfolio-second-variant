@@ -1,22 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from "styled-components";
 import {LogoIcon} from "../../../../../assets/icons/LogoIcon";
 import {FlexWrapper} from "../../../ui/flexWrapper/FlexWrapper";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
 import {myTheme} from "../../../../../styles/Theme.styled";
 import {BurgerIcon} from "../../../../../assets/icons/burgerIcon";
+import {MobileMenu} from "../../mobileMenu/MobileMenu";
+
 
 export const Header = () => {
+    const [squares, setSquares] = useState<boolean>(false);
+    const handleClick = () => {
+        setSquares(!squares);
+    };
     return (
         <StyledDiv>
             <FlexWrapper display={"flex"} align_i={"center"}>
                 <LogoIcon/>
             </FlexWrapper>
-            <HeaderMenu />
-            <MobileBurger><BurgerIcon/></MobileBurger>
+            <HeaderMenu/>
+            <MobileBurger
+                onClick={() => {handleClick()}}>
+                <BurgerIcon />
+            </MobileBurger>
+            <MobileMenu isMenu={squares} changeMenu={handleClick}/>
         </StyledDiv>
     );
 };
+
+
 const MobileBurger = styled.a`
     display: none;
     position: relative;
