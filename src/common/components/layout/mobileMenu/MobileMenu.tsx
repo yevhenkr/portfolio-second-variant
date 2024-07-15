@@ -28,7 +28,14 @@ const MenuButtons = styled(HeaderMenu)`
         align-items: center;
         margin: auto 0;
         right: 0;
-        background-color: red;
+        a {
+            color: ${myTheme.color.white};
+        }
+    }
+
+    li {
+        li {
+        }
     }
 `;
 
