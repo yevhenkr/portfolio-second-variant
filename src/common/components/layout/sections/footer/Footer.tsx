@@ -16,7 +16,7 @@ export const Footer = () => {
         });
     };
     return (
-        <StyledFooter id={'footer'}>
+        <StyledFooter id={'Contact'}>
             <TitleSection wordOne={"Contact"} wordSecond={"Me"}/>
             <StyledDiv>
                 <LinkStyled href={"https://github.com/yevhenkr"}>

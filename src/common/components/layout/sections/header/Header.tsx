@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import styled from "styled-components";
 import {LogoIcon} from "../../../../../assets/icons/LogoIcon";
 import {FlexWrapper} from "../../../ui/flexWrapper/FlexWrapper";
@@ -13,23 +13,35 @@ export const Header = () => {
     const handleClick = () => {
         setSquares(!squares);
     };
+    const [headerHeight, setHeaderHeight] = useState<number>(0); // Состояние для хранения высоты header
+    const headerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (headerRef.current) {
+            const height = headerRef.current.clientHeight;
+            setHeaderHeight(height);
+        }
+    }, []); // Пустой массив зависимостей гарантирует, что эффект сработает только один раз после монтирования
+
     return (
-        <StyledDiv>
+        <StyledDiv ref={headerRef}>
             <FlexWrapper display={"flex"} align_i={"center"}>
                 <LogoIcon/>
             </FlexWrapper>
-            <HeaderMenu/>
-            <MobileBurger
-                onClick={() => {handleClick()}}>
-                <BurgerIcon />
-            </MobileBurger>
-            <MobileMenu isMenu={squares} changeMenu={handleClick}/>
+            <HeaderMenu height={headerHeight}/>
+            <Burger
+                onClick={() => {
+                    handleClick()
+                }}>
+                <BurgerIcon/>
+            </Burger>
+            <MobileMenu headerHeight={headerHeight} isMenu={squares} changeMenu={handleClick}/>
         </StyledDiv>
     );
 };
 
 
-const MobileBurger = styled.a`
+const Burger = styled.a`
     display: none;
     position: relative;
     @media (max-width: ${myTheme.screen.medium}) {

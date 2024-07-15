@@ -5,30 +5,30 @@ import {mySections, myTheme} from "../../../../../../styles/Theme.styled";
 type PropsType = {
     className?: string;
     closeMobileMenu?: () => void;
+    height: number
 };
 
 export const HeaderMenu = (props: PropsType) => {
     const handleClick = (id: string) => {
-        const element = document.getElementById("Portfolio");
+        const element = document.getElementById(id);
         if (element) {
-            const offset = 100; // Указать необходимое смещение
+            const offset = props.height; // Указать необходимое смещение
             const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-            debugger
             window.scrollTo({
-                top: elementPosition - offset,
+                top: (elementPosition - offset),
                 behavior: "smooth"  // Добавляем плавную прокрутку
             });
         }
-
         if (props.closeMobileMenu) {
             props.closeMobileMenu();
         }
     };
+
     return (
         <Menu className={props.className}>
             {mySections.map((section, index) => (
                 <StyledLi key={index} onClick={() => handleClick(section[1])}>
-                    <StyledLink href={section[0]}>
+                    <StyledLink>
                         {section[1]}
                         <Mask><span>{section[1]}</span></Mask>
                         <Mask><span>{section[1]}</span></Mask>

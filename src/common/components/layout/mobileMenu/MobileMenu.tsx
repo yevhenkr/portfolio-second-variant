@@ -6,15 +6,16 @@ import { HeaderMenu } from "../sections/header/headerMenu/HeaderMenu";
 type PropsType = {
     isMenu: boolean;
     changeMenu: () => void;
+    headerHeight: number;
 };
 
-export const MobileMenu: React.FC<PropsType> = ({ isMenu, changeMenu }) => {
+export const MobileMenu: React.FC<PropsType> = ({ isMenu, changeMenu, headerHeight }) => {
     return (
         <>
             {isMenu ? (
                 <Menu>
                     <CloseButton onClick={changeMenu}>Х</CloseButton>
-                    <MenuButtons closeMobileMenu={changeMenu}/>
+                    <MenuButtons height={headerHeight} closeMobileMenu={changeMenu}/>
                 </Menu>
             ) : null}
         </>
