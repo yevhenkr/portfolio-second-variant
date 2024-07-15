@@ -5,7 +5,7 @@ import {myTheme} from "../../../../../styles/Theme.styled";
 
 export const Main = () => {
     return (
-        <StyledMain id={'Main'}>
+        <StyledMain id={'About'}>
             <StyledDiv>
                 <FlexWrapper flexDirection={"column"} max_width={"600px"} width={"100%"}>
                     <StyledSpan>Hi !</StyledSpan>

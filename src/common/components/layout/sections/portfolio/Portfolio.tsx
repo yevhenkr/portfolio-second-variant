@@ -10,7 +10,7 @@ import {PortfolioCard} from "./PortfolioCard";
 
 export const Portfolio = () => {
     return (
-        <StyledSection>
+        <StyledSection id={'Portfolio'}>
             <TitleSection wordOne={"My"} wordSecond={"Portfolio"}/>
             <FlexWrapperWithMediaQuery wrap={"wrap"} gap={"20px"} flexDirection={"row"} justify={"space-around"}>
                 <PortfolioCard link={"https://vasilenko-evgen-xd8s.vercel.app/"} label={"Portfolio"} bgColor={"rgba(108,99,255,0.27)"} color={"#6C63FF"} img={first}/>

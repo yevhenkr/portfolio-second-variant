@@ -1,13 +1,33 @@
 import styled from "styled-components";
-
 import React from 'react';
 import {mySections, myTheme} from "../../../../../../styles/Theme.styled";
 
-export const HeaderMenu = () => {
+type PropsType = {
+    className?: string;
+    closeMobileMenu?: () => void;
+};
+
+export const HeaderMenu = (props: PropsType) => {
+    const handleClick = (id: string) => {
+        const element = document.getElementById("Portfolio");
+        if (element) {
+            const offset = 100; // Указать необходимое смещение
+            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+            debugger
+            window.scrollTo({
+                top: elementPosition - offset,
+                behavior: "smooth"  // Добавляем плавную прокрутку
+            });
+        }
+
+        if (props.closeMobileMenu) {
+            props.closeMobileMenu();
+        }
+    };
     return (
-        <Menu>
+        <Menu className={props.className}>
             {mySections.map((section, index) => (
-                <StyledLi>
+                <StyledLi key={index} onClick={() => handleClick(section[1])}>
                     <StyledLink href={section[0]}>
                         {section[1]}
                         <Mask><span>{section[1]}</span></Mask>
@@ -31,11 +51,14 @@ const Menu = styled.ul`
         display: none;
     }
 
-`
+    li {
+        padding: 20px 40px;
+    }
+`;
+
 const StyledLi = styled.li`
     display: flex;
     align-items: center;
-
     position: relative;
 
     :hover {
@@ -53,7 +76,7 @@ const StyledLi = styled.li`
             z-index: 1;
         }
     }
-`
+`;
 
 const Mask = styled.span`
     position: absolute;
@@ -70,7 +93,7 @@ const Mask = styled.span`
             transform: translateY(-50%);
         }
     }
-`
+`;
 
 const StyledLink = styled.a`
     display: inline-block;
@@ -85,7 +108,7 @@ const StyledLink = styled.a`
         color: transparent;
 
         ${Mask} {
-            transform:  translateX(5px);
+            transform: translateX(5px);
             transition: transform 0.5s ease;
 
             color: ${myTheme.color.textColor};
@@ -96,4 +119,4 @@ const StyledLink = styled.a`
             }
         }
     }
-`
+`;
