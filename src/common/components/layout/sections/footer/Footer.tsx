@@ -51,7 +51,9 @@ const DesignSpan = styled.span`
     bottom: 20px;
     text-align: center;
     display: flex;
-    color: black`
+    color: black;
+    color: ${myTheme.color.white};
+`
 
 const StyledDiv = styled.div`
     position: relative;
