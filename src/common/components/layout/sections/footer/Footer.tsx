@@ -110,7 +110,7 @@ const StyledFooter = styled.footer`
         position: absolute;
         right: 0;
         left: 0;
-        bottom: 218px;
+        bottom: 127px;
         z-index: -1;
         width: 100vw;
         height: 200vh;
