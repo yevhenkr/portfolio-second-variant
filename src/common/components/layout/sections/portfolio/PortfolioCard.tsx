@@ -24,6 +24,9 @@ export const PortfolioCard = (props: PropsType) => {
                 <ImageContainer beforeContent={""} beforeWidth={"195px"}
                                 beforeHeight={"195px"} beforeBackgroundColor={`${props.bgColor}`}>
                     <StyledImg src={`${props.img}`} alt={"props.alt"}/>
+                    <a href={props.link} >
+                        VIEW PROJECT
+                    </a>
                 </ImageContainer></a>
 
         </WrapperWithMediaQ>
@@ -32,7 +35,6 @@ export const PortfolioCard = (props: PropsType) => {
 };
 
 const WrapperWithMediaQ = styled(FlexWrapper)`
- 
     @media (max-width: ${myTheme.screen.medium}) {
         flex: 1 1 calc(33.33% - 40px);
         box-sizing: border-box;
@@ -76,6 +78,27 @@ const ImageContainer = styled.div<DivType>`
     border-radius: 7px;
     border: 1px solid rgba(0, 0, 0, 0.09);
 
+    a {
+        position: absolute;
+        background-color: ${myTheme.color.navy};
+        box-shadow: 0 4px 4px 0 rgba(77, 86, 96, 0.13);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 15px;
+        border-radius: 12px;
+        padding: 10px 20px;
+        color: ${myTheme.color.white};
+        z-index: 2;
+        opacity: 0;
+    }
+    &:hover {
+      a {
+            opacity: 1;
+        }
+        opacity: 1;
+    }
+
     &::before {
         content: ${props => `'${props.beforeContent || ''}'`};
         position: absolute;
@@ -99,7 +122,7 @@ const ImageContainer = styled.div<DivType>`
             left: -120px;
         }
     }
-    
+
     @media (max-width: ${myTheme.screen.small}) {
         max-width: calc(100% - 30px);
         width: 410px;
@@ -119,6 +142,7 @@ const ImageContainer = styled.div<DivType>`
             left: -120px;
         }
     }
+
 `
 
 const StyledImg = styled.img`
