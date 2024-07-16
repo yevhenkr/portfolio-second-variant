@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
-import { myTheme } from "../../../../styles/Theme.styled";
-import { HeaderMenu } from "../sections/header/headerMenu/HeaderMenu";
+import {myTheme} from "../../../../styles/Theme.styled";
+import {HeaderMenu} from "../sections/header/headerMenu/HeaderMenu";
+import {CloseIcon} from "../../../../assets/icons/closeIcon";
 
 type PropsType = {
     isMenu: boolean;
@@ -9,12 +10,12 @@ type PropsType = {
     headerHeight: number;
 };
 
-export const MobileMenu: React.FC<PropsType> = ({ isMenu, changeMenu, headerHeight }) => {
+export const MobileMenu: React.FC<PropsType> = ({isMenu, changeMenu, headerHeight}) => {
     return (
-            <Menu isMenu={isMenu}>
-                <CloseButton onClick={changeMenu}>Х</CloseButton>
-                <MenuButtons height={headerHeight} closeMobileMenu={changeMenu}/>
-            </Menu>
+        <Menu isMenu={isMenu}>
+            <CloseButton onClick={changeMenu}><StyledCloseIcon/></CloseButton>
+            <MenuButtons height={headerHeight} closeMobileMenu={changeMenu}/>
+        </Menu>
     );
 };
 
@@ -52,6 +53,9 @@ const MenuButtons = styled(HeaderMenu)`
 
 const CloseButton = styled.button`
     position: absolute;
+    padding: 0;
+    width: 30px;
+    height: 30px;
     top: 20px;
     right: 20px;
     background: none;
@@ -59,4 +63,11 @@ const CloseButton = styled.button`
     font-size: 24px;
     cursor: pointer;
     color: white;
+`;
+
+const StyledCloseIcon = styled(CloseIcon)`
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 `;
