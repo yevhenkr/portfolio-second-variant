@@ -7,6 +7,7 @@ import second from "../../../../../assets/img/Cards.png";
 import therd from "../../../../../assets/img/SFood.png";
 import {myTheme} from "../../../../../styles/Theme.styled";
 import {PortfolioCard} from "./PortfolioCard";
+import {Partickl} from "../../../ui/part/partickl";
 
 export const Portfolio = () => {
     return (
@@ -39,6 +40,7 @@ const StyledSection = styled.section`
     max-width: 1628px;
     width: 100%;
     position: relative;
+    background-color: white;
     z-index: 1;
 
     &::after, &::before {

@@ -5,10 +5,12 @@ import {Footer} from "./common/components/layout/sections/footer/Footer";
 import {Header} from "./common/components/layout/sections/header/Header";
 import {Portfolio} from "./common/components/layout/sections/portfolio/Portfolio";
 import {myTheme} from "./styles/Theme.styled";
+import {Partickl} from "./common/components/ui/part/partickl";
 
 function App() {
     return (
         <AppStyle>
+            <Partickl/>
             <Header/>
             <Main/>
             <Passions/>

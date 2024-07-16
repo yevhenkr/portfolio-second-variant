@@ -5,6 +5,7 @@ import {PassionsBack} from "../../../../../assets/icons/passionsBack";
 import {PassionsUI} from "../../../../../assets/icons/passionsUI";
 import {myTheme} from "../../../../../styles/Theme.styled";
 import {TitleSection} from "../../../ui/titleSections/TitleSection";
+import {Partickl} from "../../../ui/part/partickl";
 
 export const Passions = () => {
     return (
@@ -77,7 +78,7 @@ const StyledDiv = styled.section`
     max-width: 100%;
     width: 100%;
     position: relative;
-
+    background-color: white;
     &::after, &::before {
         content: "";
         position: absolute;
