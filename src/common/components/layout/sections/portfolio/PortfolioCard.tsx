@@ -30,7 +30,6 @@ export const PortfolioCard = (props: PropsType) => {
                 </ImageContainer></a>
 
         </WrapperWithMediaQ>
-
     );
 };
 
@@ -92,10 +91,12 @@ const ImageContainer = styled.div<DivType>`
         z-index: 2;
         opacity: 0;
     }
+
     &:hover {
-      a {
+        a {
             opacity: 1;
         }
+
         opacity: 1;
     }
 
@@ -114,6 +115,14 @@ const ImageContainer = styled.div<DivType>`
     @media (max-width: ${myTheme.screen.medium}) {
         max-width: calc(100% - 30px);
         width: 600px;
+        img {
+            filter: blur(2px);
+        }
+
+        a {
+            filter: none;
+            opacity: 1;
+        }
 
         &::before {
             width: 280px;
