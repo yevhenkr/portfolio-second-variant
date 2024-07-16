@@ -16,7 +16,7 @@ export const HeaderMenu = (props: PropsType) => {
             const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
             window.scrollTo({
                 top: (elementPosition - offset),
-                behavior: "smooth"  // Добавляем плавную прокрутку
+                behavior: "smooth"
             });
         }
         if (props.closeMobileMenu) {

@@ -11,16 +11,27 @@ type PropsType = {
 
 export const MobileMenu: React.FC<PropsType> = ({ isMenu, changeMenu, headerHeight }) => {
     return (
-        <>
-            {isMenu ? (
-                <Menu>
-                    <CloseButton onClick={changeMenu}>Х</CloseButton>
-                    <MenuButtons height={headerHeight} closeMobileMenu={changeMenu}/>
-                </Menu>
-            ) : null}
-        </>
+            <Menu isMenu={isMenu}>
+                <CloseButton onClick={changeMenu}>Х</CloseButton>
+                <MenuButtons height={headerHeight} closeMobileMenu={changeMenu}/>
+            </Menu>
     );
 };
+
+const Menu = styled.div<{ isMenu: boolean }>`
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: ${myTheme.color.blue};
+    top: 0;
+    left: 0;
+    opacity: ${props => (props.isMenu ? 1 : 0)};
+    transform: ${props => (props.isMenu ? 'translateY(0)' : 'translateY(-100%)')};
+    transition: opacity 0.5s ease, transform 0.5s ease;
+`;
+
 const MenuButtons = styled(HeaderMenu)`
     @media (max-width: ${myTheme.screen.medium}) {
         display: flex;
@@ -37,19 +48,6 @@ const MenuButtons = styled(HeaderMenu)`
         li {
         }
     }
-`;
-
-const Menu = styled.div`
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    background-color: ${myTheme.color.blue};
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
 `;
 
 const CloseButton = styled.button`

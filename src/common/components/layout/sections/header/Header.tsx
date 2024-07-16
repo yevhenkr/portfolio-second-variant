@@ -12,6 +12,7 @@ export const Header = () => {
     const [squares, setSquares] = useState<boolean>(false);
     const handleClick = () => {
         setSquares(!squares);
+
     };
     const [headerHeight, setHeaderHeight] = useState<number>(0); // Состояние для хранения высоты header
     const headerRef = useRef<HTMLDivElement>(null);
@@ -29,10 +30,9 @@ export const Header = () => {
                 <LogoIcon/>
             </FlexWrapper>
             <HeaderMenu height={headerHeight}/>
-            <Burger
-                onClick={() => {
-                    handleClick()
-                }}>
+            <Burger onClick={() => {
+                handleClick()
+            }}>
                 <BurgerIcon/>
             </Burger>
             <MobileMenu headerHeight={headerHeight} isMenu={squares} changeMenu={handleClick}/>
