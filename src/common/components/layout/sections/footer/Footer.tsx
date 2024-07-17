@@ -101,6 +101,7 @@ const StyledFooter = styled.footer`
     position: relative;
     align-items: center;
     overflow: hidden;
+    padding-top: 20px;
     padding-bottom: 225px;
 
     @media (max-width: ${myTheme.screen.medium}) {

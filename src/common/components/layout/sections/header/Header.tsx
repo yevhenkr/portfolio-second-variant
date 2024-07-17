@@ -59,7 +59,7 @@ const StyledDiv = styled.div`
     width: 100%;
     max-width: 1628px;
     min-height: 50px;
-    padding: 0 10px;
+    padding: 0 140px;
     display: flex;
     justify-content: space-between;
     background: ${myTheme.color.white};

@@ -74,8 +74,12 @@ const WrapWithMediaQ = styled(FlexWrapper)`
 `
 
 const StyledDiv = styled.section`
-    padding-bottom: 170px;
-    max-width: 100%;
+    padding-bottom: 150px;
+    padding-top: 20px;
+    border-radius: 50px;
+    max-width: 1628px;
+    padding-left:50px;
+    padding-right:50px;
     width: 100%;
     position: relative;
     background-color: white;

@@ -52,7 +52,7 @@ const StyledMain = styled.main`
     position: relative;
     max-width: 1628px;
     width: 100%;
-    padding-bottom: 120px;
+    padding-bottom: 100px;
     padding-top: 124px;
     position: relative;
 

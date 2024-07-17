@@ -23,6 +23,9 @@ export const Portfolio = () => {
 };
 const FlexWrapperWithMediaQuery = styled(FlexWrapper)`
     display: flex;
+    max-width: 1628px;
+    margin: 0 auto;
+    gap: 50px;
     flex-direction: row;
     @media (max-width: ${myTheme.screen.medium}) {
         flex-wrap: wrap;
@@ -37,7 +40,7 @@ const FlexWrapperWithMediaQuery = styled(FlexWrapper)`
 
 const StyledSection = styled.section`
     padding-bottom: 170px;
-    max-width: 1628px;
+    max-width: 100%;
     width: 100%;
     position: relative;
     background-color: white;

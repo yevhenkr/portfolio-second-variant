@@ -2,7 +2,8 @@ import { useCallback } from "react";
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
+import { loadSlim } from "tsparticles-slim";
+import {myTheme} from "../../../../styles/Theme.styled"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 
 export const Partickl = () => {
     const particlesInit = useCallback(async (engine: Engine) => {
@@ -22,7 +23,7 @@ export const Partickl = () => {
             options={{
                 background: {
                     color: {
-                        value: "#0d47a1",
+                        value: `${myTheme.color.blue}`,
                     },
                 },
                 fpsLimit: 120,
