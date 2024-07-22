@@ -7,7 +7,6 @@ import second from "../../../../../assets/img/Cards.png";
 import therd from "../../../../../assets/img/SFood.png";
 import {myTheme} from "../../../../../styles/Theme.styled";
 import {PortfolioCard} from "./PortfolioCard";
-import {Partickl} from "../../../ui/part/partickl";
 
 export const Portfolio = () => {
     return (

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../ui/flexWrapper/FlexWrapper";
 import {myTheme} from "../../../../../styles/Theme.styled";
+import Tilt from 'react-parallax-tilt';
 
 type PropsType = {
     img?: string;
@@ -21,13 +22,15 @@ export const PortfolioCard = (props: PropsType) => {
                 <StyledSpan color={`${props.color}`}>{props.label}</StyledSpan>
             </FlexWrapper>
             <a href={props.link}>
-                <ImageContainer beforeContent={""} beforeWidth={"195px"}
-                                beforeHeight={"195px"} beforeBackgroundColor={`${props.bgColor}`}>
-                    <StyledImg src={`${props.img}`} alt={"props.alt"}/>
-                    <a href={props.link} >
-                        VIEW PROJECT
-                    </a>
-                </ImageContainer></a>
+                <Tilt>
+                    <ImageContainer beforeContent={""} beforeWidth={"195px"}
+                                    beforeHeight={"195px"} beforeBackgroundColor={`${props.bgColor}`}>
+                        <StyledImg src={`${props.img}`} alt={"props.alt"}/>
+                        <a href={props.link}>
+                            VIEW PROJECT
+                        </a>
+                    </ImageContainer>
+                </Tilt></a>
 
         </WrapperWithMediaQ>
     );
@@ -163,7 +166,7 @@ const StyledImg = styled.img`
     border: 1px solid rgba(0, 0, 0, 0.3);
     z-index: 1;
 
-    :hover{
+    :hover {
         filter: blur(2px);
     }
 `

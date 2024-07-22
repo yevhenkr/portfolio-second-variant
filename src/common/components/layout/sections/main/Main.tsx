@@ -2,6 +2,7 @@ import {UserSVG} from "../../../../../assets/icons/user";
 import styled from "styled-components";
 import {FlexWrapper} from "../../../ui/flexWrapper/FlexWrapper";
 import {myTheme} from "../../../../../styles/Theme.styled";
+import Tilt from 'react-parallax-tilt';
 
 export const Main = () => {
     return (
@@ -17,9 +18,11 @@ export const Main = () => {
                         I’am coding with a clean and beautiful problem
                         solving in mind.</StyledP>
                 </FlexWrapper>
-                <WrapSvg>
-                    <UserSVG/>
-                </WrapSvg>
+                <Tilt>
+                    <WrapSvg>
+                        <UserSVG/>
+                    </WrapSvg>
+                </Tilt>
             </StyledDiv>
         </StyledMain>
     );
@@ -78,8 +81,8 @@ const StyledMain = styled.main`
         top: 50%;
         left: 50%;
     }
-    
-    @media (max-width:  ${myTheme.screen.medium}) {
+
+    @media (max-width: ${myTheme.screen.medium}) {
         padding-bottom: 70px;
     }
 `

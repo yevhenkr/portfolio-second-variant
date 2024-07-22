@@ -5,7 +5,6 @@ import {PassionsBack} from "../../../../../assets/icons/passionsBack";
 import {PassionsUI} from "../../../../../assets/icons/passionsUI";
 import {myTheme} from "../../../../../styles/Theme.styled";
 import {TitleSection} from "../../../ui/titleSections/TitleSection";
-import {Partickl} from "../../../ui/part/partickl";
 
 export const Passions = () => {
     return (
